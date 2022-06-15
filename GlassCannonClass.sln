@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlassCannonClass", "GlassCannonClass.csproj", "{955CFDB3-55A1-4B9D-8F0E-0D2A8EDBA017}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{955CFDB3-55A1-4B9D-8F0E-0D2A8EDBA017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955CFDB3-55A1-4B9D-8F0E-0D2A8EDBA017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955CFDB3-55A1-4B9D-8F0E-0D2A8EDBA017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955CFDB3-55A1-4B9D-8F0E-0D2A8EDBA017}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D794945-0BF5-4651-84F8-A276B1210328}
+	EndGlobalSection
+EndGlobal
