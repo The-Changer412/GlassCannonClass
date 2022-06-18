@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 using GlassCannonClass.Projectiles;
 using System.Collections.Generic;
 
@@ -9,6 +10,20 @@ namespace GlassCannonClass
 	public class GlassCannonClass : Mod
 	{
 
+	}
+
+	public class ExampleGlobalNPC : GlobalNPC
+	{
+		//make the merchant sell the ammo glass
+		public override void SetupShop(int type, Chest shop, ref int nextSlot)
+		{
+			if (type == NPCID.Merchant)
+			{
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Ammo.GlassAmmo>());
+				shop.item[nextSlot].shopCustomPrice = Item.sellPrice(0, 0, 0, 5);
+				nextSlot++;
+			}
+		}
 	}
 
 	public class GlassDamage : DamageClass
