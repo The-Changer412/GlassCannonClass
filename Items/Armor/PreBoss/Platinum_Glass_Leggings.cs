@@ -1,13 +1,12 @@
-﻿using System;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace GlassCannonClass.Items.Armor
+namespace GlassCannonClass.Items.Armor.PreBoss
 {
-    [AutoloadEquip(EquipType.Body)]
-    internal class Glass_Chestplate : ModItem
+    [AutoloadEquip(EquipType.Legs)]
+    internal class Platinum_Glass_Leggings : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -22,8 +21,8 @@ namespace GlassCannonClass.Items.Armor
             Item.width = 18;
             Item.height = 18;
             Item.rare = ItemRarityID.White;
-            Item.value = Item.sellPrice(0, 0, 0, 1);
-            Item.defense = 1;
+            Item.value = Item.sellPrice(0, 0,40, 0);
+            Item.defense = 2;
             base.SetDefaults();
         }
 
@@ -31,7 +30,8 @@ namespace GlassCannonClass.Items.Armor
         {
             //set the crafting recipe for the item
             CreateRecipe()
-                .AddIngredient(ItemID.Glass, 20)
+                .AddIngredient(ItemID.Glass, 30)
+                .AddIngredient(ItemID.GoldBar, 8)
                 .AddTile(TileID.WorkBenches)
                 .Register();
             base.AddRecipes();

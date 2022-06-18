@@ -5,14 +5,14 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 
 
-namespace GlassCannonClass.Items.Armor
+namespace GlassCannonClass.Items.Armor.Start
 {
     [AutoloadEquip(EquipType.Head)]
     internal class Glass_Helmet : ModItem
     {
         public override void SetStaticDefaults()
         {
-             //make it where you only need one of them to dupe in in journey mode
+            //make it where you only need one of them to dupe in in journey mode
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             base.SetStaticDefaults();
         }
@@ -31,14 +31,14 @@ namespace GlassCannonClass.Items.Armor
         //check if the other two peices are the proper set for the set bonus
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == ModContent.ItemType<Items.Armor.Glass_Chestplate>() && legs.type == ModContent.ItemType<Items.Armor.Glass_Leggings>();
+            return body.type == ModContent.ItemType<Glass_Chestplate>() && legs.type == ModContent.ItemType<Glass_Leggings>();
         }
 
         //apply the set bonus
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.Starter_Glass");
-            
+
         }
 
         public override void AddRecipes()

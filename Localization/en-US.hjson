@@ -9,21 +9,40 @@ Mods: {
 			Glass_Helmet: "Glass Helmet"
 			Glass_Chestplate: "Glass Chestplate"
 			Glass_Leggings: "Glass Leggings"
-			Slingshot: "Slingshot"
+			Glass_Slingshot: "Slingshot"
 			GlassAmmo: "Glass Ammo"
+			GlassProjectile: "Glass Projectile"
+			Gold_Glass_Helmet: "Gold Glass Helmet"
+			Gold_Glass_Chestplate: "Gold Glass Chestplate"
+			Gold_Glass_Leggings: "Gold Glass Leggings"
+			Platinum_Glass_Helmet: "Platinum Glass Helmet"
+			Platinum_Glass_Chestplate: "Platinum Glass Chestplate"
+			Platinum_Glass_Leggings: "Platinum Glass Leggings"
+			Gold_Glass_Pistol: "Gold Glass Pistol"
+			Platinum_Glass_Pistol: "Platinum Glass Pistol"
 		}
 
 		ItemTooltip:{ 
 			Glass_Helmet: "Don't Let the helmet break on your face."
 			Glass_Chestplate: "I don't think glass is a good material to use for armor."
 			Glass_Leggings: "How are you able to move around comfortable with glass on your legs?"
-			Slingshot: "20% not to consume ammo. \nDon't squeeze it to tight."
+			Glass_Slingshot: "10% not to consume ammo. \nDon't squeeze it to tight."
 			GlassAmmo: "Uses as ammo for weapons made out of glass."
-			GlassProjectile: "Glass Projectile"
+			Gold_Glass_Helmet: "That's going to hurt more when it shatters on your face."
+			Gold_Glass_Chestplate: "This is not going to protect you that well."
+			Gold_Glass_Leggings: "How are you able to walk with that on your legs?"
+			Platinum_Glass_Helmet: "That's going to hurt more when it shatters on your face."
+			Platinum_Glass_Chestplate: "This is not going to protect you that well."
+			Platinum_Glass_Leggings: "How are you able to walk with that on your legs?"
+			Gold_Glass_Pistol: "How did you made a pistol out of glass and metals?"
+			Platinum_Glass_Pistol: "How did you made a pistol out of glass and metals?"
 		}
 
 		SetBonus: {
+			Phrase: "You can now use glass weapons."
 			Starter_Glass: "You can now use glass weapons.\nWhy did you think that covering yourself in glass is a good idea?"
+			Gold_Glass: "You can now use glass weapons.\n 10% increase glass damage.\n 15% increase crit chance.\nHeavy metal bars + glass isn't a good idea for armor.\nHow and why did you make this?"
+			Platinum_Glass: "You can now use glass weapons.\n 10% increase glass damage.\n 15% increase crit chance.\nHeavy metal bars + glass isn't a good idea for armor.\nHow and why did you make this?"
 		}
 	}
 }
