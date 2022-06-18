@@ -1,4 +1,8 @@
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using GlassCannonClass.Projectiles;
+using System.Collections.Generic;
 
 namespace GlassCannonClass
 {
