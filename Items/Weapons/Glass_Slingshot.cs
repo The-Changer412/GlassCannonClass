@@ -18,7 +18,7 @@ namespace GlassCannonClass.Items.Weapons
             Item.useTime = 50;
             Item.width = 12;
             Item.height = 25;
-            Item.useAmmo = ModContent.ItemType<Arrow_Glass>();
+            Item.useAmmo = ModContent.ItemType<Rock_Glass>();
             Item.shoot = ModContent.ProjectileType<Rock_Glass_Projectile>();
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();

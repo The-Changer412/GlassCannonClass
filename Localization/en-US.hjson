@@ -11,7 +11,7 @@ Mods: {
 			Glass_Leggings: "Glass Leggings"
 			Glass_Slingshot: "Slingshot"
 			Rock_Glass: "Rock Ammo"
-			GlassProjectile: "Glass Projectile"
+			Rock_Glass_Projectile: "Rock Glass Projectile"
 			Gold_Glass_Helmet: "Gold Glass Helmet"
 			Gold_Glass_Chestplate: "Gold Glass Chestplate"
 			Gold_Glass_Leggings: "Gold Glass Leggings"
@@ -21,7 +21,9 @@ Mods: {
 			Gold_Glass_Pistol: "Gold Glass Pistol"
 			Platinum_Glass_Pistol: "Platinum Glass Pistol"
 			Musket_Glass: "Musket Glass Ammo"
-			Musket_Glass_Projectile: "Glass Projectile"
+			Musket_Glass_Projectile: "Musket Glass Projectile"
+			Arrow_Glass: "Arrow Glass"
+			Arrow_Glass_Projectile: "Arrow Glass Projectile"
 		}
 
 		ItemTooltip:{ 
@@ -29,7 +31,7 @@ Mods: {
 			Glass_Chestplate: "I don't think glass is a good material to use for armor."
 			Glass_Leggings: "How are you able to move around comfortable with glass on your legs?"
 			Glass_Slingshot: "10% not to consume ammo. \nDon't squeeze it to tight."
-			Rock_Glass: "Uses as ammo for the slingshot only. Why did you fuse them together?"
+			Rock_Glass: "Uses as ammo for the slingshot only. \nWhy did you fuse them together?"
 			Gold_Glass_Helmet: "That's going to hurt more when it shatters on your face."
 			Gold_Glass_Chestplate: "This is not going to protect you that well."
 			Gold_Glass_Leggings: "How are you able to walk with that on your legs?"
@@ -39,6 +41,7 @@ Mods: {
 			Gold_Glass_Pistol: "How did you made a pistol out of glass and metals?"
 			Platinum_Glass_Pistol: "How did you made a pistol out of glass and metals?"
 			Musket_Glass: "Uses as ammo for guns made out of glass.\nHow is this pratical to use?"
+			Arrow_Glass: "Uses as ammo for bows made out of glass.\nThis is going to hurt."
 		}
 
 		SetBonus: {

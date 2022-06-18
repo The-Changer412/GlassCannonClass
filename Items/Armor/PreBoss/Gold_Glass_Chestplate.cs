@@ -22,7 +22,7 @@ namespace GlassCannonClass.Items.Armor.PreBoss
             Item.height = 18;
             Item.rare = ItemRarityID.White;
             Item.value = Item.sellPrice(0, 0,40, 0);
-            Item.defense = 3;
+            Item.defense = 2;
             base.SetDefaults();
         }
 
