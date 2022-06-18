@@ -14,13 +14,13 @@ namespace GlassCannonClass
 
 	public class ExampleGlobalNPC : GlobalNPC
 	{
-		//make the merchant sell the ammo glass
 		public override void SetupShop(int type, Chest shop, ref int nextSlot)
 		{
 			if (type == NPCID.Merchant)
 			{
-				shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Ammo.GlassAmmo>());
-				shop.item[nextSlot].shopCustomPrice = Item.sellPrice(0, 0, 0, 5);
+				//make the Merchant sell glass for one copper
+				shop.item[nextSlot].SetDefaults(ItemID.Glass);
+				shop.item[nextSlot].shopCustomPrice = Item.sellPrice(0, 0, 0, 1);
 				nextSlot++;
 			}
 		}

@@ -4,6 +4,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using GlassCannonClass.Items.Ammo;
+using GlassCannonClass.Projectiles;
 
 namespace GlassCannonClass.Items.Weapons
 {
@@ -17,8 +18,8 @@ namespace GlassCannonClass.Items.Weapons
             Item.useTime = 50;
             Item.width = 12;
             Item.height = 25;
-            Item.shoot = ItemID.Glass;
-            Item.useAmmo = ModContent.ItemType<GlassAmmo>();
+            Item.useAmmo = ModContent.ItemType<Musket_Glass>();
+            Item.shoot = ModContent.ProjectileType<Musket_Glass_Projectile>();
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 26;
