@@ -12,11 +12,7 @@ namespace GlassCannonClass.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-            //set the details for the item
-            DisplayName.SetDefault("Glass Helmet");
-            Tooltip.SetDefault("Don't Let the helmet break on your face.");
-
-            //make it where you only need one of them to dupe in in journey mode
+             //make it where you only need one of them to dupe in in journey mode
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             base.SetStaticDefaults();
         }
@@ -32,14 +28,16 @@ namespace GlassCannonClass.Items.Armor
             base.SetDefaults();
         }
 
+        //check if the other two peices are the proper set for the set bonus
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
             return body.type == ModContent.ItemType<Items.Armor.Glass_Chestplate>() && legs.type == ModContent.ItemType<Items.Armor.Glass_Leggings>();
         }
 
+        //apply the set bonus
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "You can now use glass weapons.\nWhy did you think that covering yourself in glass is a good idea?";
+            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.Starter_Glass");
             
         }
 

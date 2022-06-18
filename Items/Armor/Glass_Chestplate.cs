@@ -11,10 +11,6 @@ namespace GlassCannonClass.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-            //set the details for the item
-            DisplayName.SetDefault("Glass Chestplate");
-            Tooltip.SetDefault("I don't think glass is a good material to use for armor.");
-
             //make it where you only need one of them to dupe in in journey mode
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             base.SetStaticDefaults();

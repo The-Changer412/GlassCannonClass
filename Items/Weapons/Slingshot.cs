@@ -8,32 +8,27 @@ namespace GlassCannonClass.Items.Weapons
 {
     public class Slingshot : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("wasd"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting Item line.
-            Tooltip.SetDefault("Don't squeeze it to tight");
-        }
-
         //set the stats for it
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.useAnimation = 30;
-            Item.useTime = 40;
+            Item.useTime = 50;
             Item.width = 12;
             Item.height = 25;
             Item.shoot = ItemID.Glass;
             Item.useAmmo = ModContent.ItemType<GlassAmmo>();
             Item.UseSound = SoundID.Item5;
-            Item.damage = 20;
-            Item.crit = 10;
+            Item.DamageType = ModContent.GetInstance<GlassDamage>();
+            Item.damage = 16;
+            Item.crit += 4;
             Item.shootSpeed = 30f;
             Item.noMelee = true;
             Item.autoReuse = true;
-            Item.value = 100;
+            Item.value = Item.sellPrice(0, 0, 0, 1);
         }
 
-        //make it where you can only use it with the full set
+        //make it where you can only use it with the full set of glass armor
         public override bool CanUseItem(Player player)
         {
             if (player.setBonus.Contains("You can now use glass weapons."))

@@ -11,10 +11,6 @@ namespace GlassCannonClass.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-            //set the details for the item
-            DisplayName.SetDefault("Glass Leggings");
-            Tooltip.SetDefault("How are you able to move around comfortable with glass on your legs?");
-
             //make it where you only need one of them to dupe in in journey mode
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             base.SetStaticDefaults();
@@ -27,7 +23,7 @@ namespace GlassCannonClass.Items.Armor
             Item.height = 18;
             Item.rare = ItemRarityID.White;
             Item.value = Item.sellPrice(0, 0, 0, 1);
-            Item.defense = 1;
+            Item.defense = 0;
             base.SetDefaults();
         }
 

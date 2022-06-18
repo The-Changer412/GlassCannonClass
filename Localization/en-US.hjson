@@ -1,0 +1,29 @@
+﻿# translation file
+Mods: {
+	GlassCannonClass: {
+		DamageClassName: {
+			GlassDamage: "Glass Damage"
+		}
+
+		ItemTooltip:{ 
+			Glass_Helmet: "Don't Let the helmet break on your face."
+			Glass_Chestplate: "I don't think glass is a good material to use for armor."
+			Glass_Leggings: "How are you able to move around comfortable with glass on your legs?"
+			Slingshot: "Don't squeeze it to tight."
+			GlassAmmo: "Uses as ammo for weapons made out of glass.\nAmmo"
+			GlassProjectile: "Glass Projectile"
+		}
+
+		ItemName: {
+			Glass_Helmet: "Glass Helmet"
+			Glass_Chestplate: "Glass Chestplate"
+			Glass_Leggings: "Glass Leggings"
+			Slingshot: "Slingshot"
+			GlassAmmo: "Glass Ammo"
+		}
+
+		SetBonus: {
+			Starter_Glass: "You can now use glass weapons.\nWhy did you think that covering yourself in glass is a good idea?"
+		}
+	}
+}
