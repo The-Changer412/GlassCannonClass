@@ -14,6 +14,7 @@ namespace GlassCannonClass.Items.Weapons
             Tooltip.SetDefault("Don't squeeze it to tight");
         }
 
+        //set the stats for it
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Shoot;
@@ -32,16 +33,26 @@ namespace GlassCannonClass.Items.Weapons
             Item.value = 100;
         }
 
+        //make it where you can only use it with the full set
         public override bool CanUseItem(Player player)
         {
-            return true;
+            if (player.setBonus.Contains("You can now use glass weapons."))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }    
         }
 
+        //offset the slingshot so the player is holding it correctly
         public override Vector2? HoldoutOffset()
         {
             return new Vector2(-15, 0);
         }
 
+        //make it craftable
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

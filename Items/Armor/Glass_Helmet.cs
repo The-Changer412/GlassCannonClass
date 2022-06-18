@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 
 namespace GlassCannonClass.Items.Armor
@@ -29,6 +30,17 @@ namespace GlassCannonClass.Items.Armor
             Item.value = Item.sellPrice(0, 0, 0, 1);
             Item.defense = 0;
             base.SetDefaults();
+        }
+
+        public override bool IsArmorSet(Item head, Item body, Item legs)
+        {
+            return body.type == ModContent.ItemType<Items.Armor.Glass_Chestplate>() && legs.type == ModContent.ItemType<Items.Armor.Glass_Leggings>();
+        }
+
+        public override void UpdateArmorSet(Player player)
+        {
+            player.setBonus = "You can now use glass weapons.\nWhy did you think that covering yourself in glass is a good idea?";
+            
         }
 
         public override void AddRecipes()
