@@ -12,7 +12,7 @@ namespace GlassCannonClass.Projectiles
 			Projectile.width = 16;
 			Projectile.height = 16;
 			Projectile.friendly = true;
-			Projectile.penetrate = 2;
+			Projectile.penetrate = 3;
 			Projectile.aiStyle = ProjectileID.Bullet;
 			AIType = ProjectileID.Bullet;
 		}
