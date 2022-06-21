@@ -39,6 +39,7 @@ namespace GlassCannonClass.Items.Armor.PreHM
             player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.Demonite_Class");
             player.GetDamage(ModContent.GetInstance<GlassDamage>()) += 0.25f;
             player.GetCritChance(ModContent.GetInstance<GlassDamage>()) += 0.20f;
+            player.GetModPlayer<GlassPlayer>().EvilSetBonus = true;
         }
 
         public override void AddRecipes()

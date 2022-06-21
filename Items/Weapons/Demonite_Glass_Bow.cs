@@ -23,7 +23,7 @@ namespace GlassCannonClass.Items.Weapons
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 52;
-            Item.crit += 12;
+            Item.crit += 14;
             Item.shootSpeed = 30f;
             Item.noMelee = true;
             Item.autoReuse = true;

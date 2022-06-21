@@ -65,7 +65,7 @@ Mods: {
 			Starter_Glass: "You can now use glass weapons.\nWhy did you think that covering yourself in glass is a good idea?"
 			Gold_Glass: "You can now use glass weapons.\n10% increase glass damage.\n15% increase crit chance.\nGold bars + glass isn't a good idea for armor.\nHow and why did you make this?"
 			Platinum_Glass: "You can now use glass weapons.\n10% increase glass damage.\n15% increase crit chance.\nPlatinum bars + glass isn't a good idea for armor.\nHow and why did you make this?"
-			Demonite_Class: "You can now use glass weapons.\n25% increase glass damage.\n20% increase crit chance.\nYou are now using the power of evil and glass to protect yourself."
+			Demonite_Class: "You can now use glass weapons.\n25% increase glass damage.\n20% increase crit chance.\nHitting an enemy has a 20% chance of firing a wooden arrow torwards the enemy.\nYou are now using the power of evil and glass to protect yourself."
 		}
 	}
 }
