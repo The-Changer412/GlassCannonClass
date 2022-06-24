@@ -35,8 +35,10 @@ namespace GlassCannonClass
         {
 			if (EvilSetBonus && Main.rand.Next(1, 5) == 1)
             {
-				Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position+new Vector2(0, 5), victim.DirectionFrom(Player.position)*30, ProjectileID.WoodenArrowFriendly, 10, 2f, Player.whoAmI);
-            }
+				//Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position+new Vector2(0, 5), victim.DirectionFrom(Player.position)*30, ProjectileID.WoodenArrowFriendly, 10, 2f, Player.whoAmI);
+				Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position + new Vector2(0, 5), victim.DirectionFrom(Player.position) * 30, ModContent.ProjectileType<Glass_Shard>(), 10, 2f, Player.whoAmI);
+				Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position + new Vector2(0, 5), victim.DirectionFrom(Player.position) * 30, ProjectileID.StardustGuardian, 10, 2f, Player.whoAmI);
+			}
             base.OnHitAnything(x, y, victim);
         }
 
