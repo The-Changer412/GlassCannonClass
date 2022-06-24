@@ -12,6 +12,7 @@ Mods: {
 			Glass_Slingshot: "Slingshot"
 			Rock_Glass: "Rock Glass Ammo"
 			Rock_Glass_Projectile: "Rock Glass Projectile"
+
 			Gold_Glass_Helmet: "Gold Glass Helmet"
 			Gold_Glass_Chestplate: "Gold Glass Chestplate"
 			Gold_Glass_Leggings: "Gold Glass Leggings"
@@ -20,10 +21,12 @@ Mods: {
 			Platinum_Glass_Leggings: "Platinum Glass Leggings"
 			Gold_Glass_Pistol: "Gold Glass Pistol"
 			Platinum_Glass_Pistol: "Platinum Glass Pistol"
+
 			Musket_Glass: "Musket Glass Ammo"
 			Musket_Glass_Projectile: "Musket Glass Projectile"
 			Arrow_Glass: "Glass Arrow"
 			Arrow_Glass_Projectile: "Arrow Glass Projectile"
+
 			Demonite_Helmet: "Demonite Glass Helmet"
 			Demonite_Chestplate: "Demonite Glass Chestplate"
 			Demonite_Leggings: "Demonite Glass Leggings"
@@ -32,6 +35,15 @@ Mods: {
 			Crimtane_Chestplate: "Crimtane Glass Chestplate"
 			Crimtane_Leggings: "Crimtane Glass Leggings"
 			Crimtane_Glass_Bow: "Crimtane Glass Bow"
+
+			Adamantite_Glass_Helmet: "Adamantite Glass Helmet"
+			Adamantite_Glass_Chestplate: "Adamantite Glass Chestplate"
+			Adamantite_Glass_Leggings: "Adamantite Glass Leggings"
+			Adamantite_Glass_Repeater: "Adamantite Glass Repeater"
+			Titamium_Glass_Helmet: "Titamium Glass Helmet"
+			Titamium_Glass_Chestplate: "Titamium Glass Chestplate"
+			Titamium_Glass_Leggings: "Titamium Glass Leggings"
+			Titamium_Glass_Repeater: "Titamium Glass Repeater"
 		}
 
 		ItemTooltip:{ 
@@ -40,6 +52,7 @@ Mods: {
 			Glass_Leggings: "How are you able to move around comfortable with glass on your legs?"
 			Glass_Slingshot: "10% not to consume ammo. \nDon't squeeze it to tight."
 			Rock_Glass: "Uses as ammo for the slingshot only. \nWhy did you fuse them together?"
+
 			Gold_Glass_Helmet: "That's going to hurt more when it shatters on your face."
 			Gold_Glass_Chestplate: "This is not going to protect you that well."
 			Gold_Glass_Leggings: "How are you able to walk with that on your legs?"
@@ -48,24 +61,37 @@ Mods: {
 			Platinum_Glass_Leggings: "How are you able to walk with that on your legs?"
 			Gold_Glass_Pistol: "How did you made a pistol out of glass and gold?"
 			Platinum_Glass_Pistol: "How did you made a pistol out of glass and platinum?"
+			
 			Musket_Glass: "Uses as ammo for guns made out of glass.\nHow is this pratical to use?"
 			Arrow_Glass: "Uses as ammo for bows made out of glass.\nThis is going to hurt."
+			
 			Demonite_Helmet: "How did you manage to put the evil in this glass?"
 			Demonite_Chestplate: "Now your chest is full of evil and glass shards when you get hit."
 			Demonite_Leggings: "I still don't know how you are able to walk around with glass and evil on your legs."
-			Demonite_Glass_Bow: "Why did you made a evil glass bow instead of a evil glass gun?"
+			Demonite_Glass_Bow: "A evil glass bow for a evil person."
 			Crimtane_Helmet: "How did you manage to put the evil in this glass?"
 			Crimtane_Chestplate: "Now your chest is full of evil and glass shards when you get hit."
 			Crimtane_Leggings: "I still don't know how you are able to walk around with glass and evil on your legs."
-			Crimtane_Glass_Bow: "Why did you made a evil glass bow instead of a evil glass gun?"
+			Crimtane_Glass_Bow: "A evil glass bow for a evil person."
+
+			Adamantite_Glass_Helmet: "Don't Let the hard helmet break on your beautiful face."
+			Adamantite_Glass_Chestplate: "When this breaks on you while wearing it, its going to hurt you a lot cause of the hard metal and the glass shards."
+			Adamantite_Glass_Leggings: "How are you able to walk when wearing something this hard on your legs?"
+			Adamantite_Glass_Repeater: "This is going to hit the enemies really hard."
+			Titamium_Glass_Helmet: "Don't Let the hard helmet break on your beautiful face."
+			Titamium_Glass_Chestplate: "When this breaks on you while wearing it, its going to hurt you a lot cause of the hard metal and the glass shards."
+			Titamium_Glass_Leggings: "How are you able to walk when wearing something this hard on your legs?"
+			Titamium_Glass_Repeater: "This is going to hit the enemies really hard."
+
 		}
 
 		SetBonus: {
 			Phrase: "You can now use glass weapons."
 			Starter_Glass: "You can now use glass weapons.\nWhy did you think that covering yourself in glass is a good idea?"
-			Gold_Glass: "You can now use glass weapons.\n10% increase glass damage.\n15% increase crit chance.\nGold bars + glass isn't a good idea for armor.\nHow and why did you make this?"
-			Platinum_Glass: "You can now use glass weapons.\n10% increase glass damage.\n15% increase crit chance.\nPlatinum bars + glass isn't a good idea for armor.\nHow and why did you make this?"
-			Demonite_Class: "You can now use glass weapons.\n25% increase glass damage.\n20% increase crit chance.\nHitting an enemy has a 20% chance of firing a glass shard torwards the enemy.\nYou are now using the power of evil and glass to protect yourself."
+			Gold_Glass: "You can now use glass weapons.\n10% increase glass damage.\n15% increase crit chance.\nGold bars + glass isn't a good idea for armor."
+			Platinum_Glass: "You can now use glass weapons.\n10% increase glass damage.\n15% increase crit chance.\nPlatinum bars + glass isn't a good idea for armor."
+			Demonite_Glass: "You can now use glass weapons.\n25% increase glass damage.\n20% increase crit chance.\nHitting an enemy has a 20% chance of firing a glass shard torwards the enemy.\nYou are now using the power of evil and glass to protect yourself."
+			HMT3_Glass: "You can now use glass weapons.\n42% increase glass damage.\n32% increase crit chance.\n12% increase attack speed.\nYou just made a full armor set with one of the hardest materials and with the one of the weakest materials."
 		}
 	}
 }

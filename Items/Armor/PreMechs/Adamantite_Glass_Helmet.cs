@@ -3,10 +3,10 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace GlassCannonClass.Items.Armor.PreHM
+namespace GlassCannonClass.Items.Armor.PreMechs
 {
     [AutoloadEquip(EquipType.Head)]
-    internal class Crimtane_Helmet : ModItem
+    internal class Adamantite_Glass_Helmet : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -21,24 +21,25 @@ namespace GlassCannonClass.Items.Armor.PreHM
             Item.width = 18;
             Item.height = 18;
             Item.rare = ItemRarityID.White;
-            Item.value = Item.sellPrice(0, 0,80, 0);
-            Item.defense = 3;
+            Item.value = Item.sellPrice(0, 1,20, 0);
+            Item.defense = 4;
             base.SetDefaults();
         }
 
         //check if the other two peices are the proper set for the set bonus
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == ModContent.ItemType<Crimtane_Chestplate>() && legs.type == ModContent.ItemType<Crimtane_Leggings>();
+            return body.type == ModContent.ItemType<Adamantite_Glass_Chestplate>() && legs.type == ModContent.ItemType<Adamantite_Glass_Leggings>();
         }
 
         //apply the set bonus
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.Demonite_Glass");
-            player.GetDamage(ModContent.GetInstance<GlassDamage>()) += 0.25f;
-            player.GetCritChance(ModContent.GetInstance<GlassDamage>()) += 0.20f;
-            player.GetModPlayer<GlassPlayer>().EvilSetBonus = true;
+            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.HMT3_Glass");
+            player.GetDamage(ModContent.GetInstance<GlassDamage>()) += 0.42f;
+            player.GetCritChance(ModContent.GetInstance<GlassDamage>()) += 0.32f;
+            player.GetAttackSpeed(ModContent.GetInstance<GlassDamage>()) += 0.12f;
+            player.GetModPlayer<GlassPlayer>().HMT3SetBonus = true;
         }
 
         public override void AddRecipes()
@@ -46,9 +47,8 @@ namespace GlassCannonClass.Items.Armor.PreHM
             //set the crafting recipe for the item
             CreateRecipe()
                 .AddIngredient(ItemID.Glass, 30)
-                .AddIngredient(ItemID.CrimtaneBar, 8)
-                .AddIngredient(ItemID.TissueSample, 4)
-                .AddTile(TileID.WorkBenches)
+                .AddIngredient(ItemID.AdamantiteBar, 8)
+                .AddTile(TileID.MythrilAnvil)
                 .Register();
             base.AddRecipes();
         }

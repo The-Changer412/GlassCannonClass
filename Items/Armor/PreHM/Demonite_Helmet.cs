@@ -36,7 +36,7 @@ namespace GlassCannonClass.Items.Armor.PreHM
         //apply the set bonus
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.Demonite_Class");
+            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.Demonite_Glass");
             player.GetDamage(ModContent.GetInstance<GlassDamage>()) += 0.25f;
             player.GetCritChance(ModContent.GetInstance<GlassDamage>()) += 0.20f;
             player.GetModPlayer<GlassPlayer>().EvilSetBonus = true;

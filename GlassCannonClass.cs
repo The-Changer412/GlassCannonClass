@@ -29,23 +29,28 @@ namespace GlassCannonClass
 	public class GlassPlayer : ModPlayer
     {
 		public bool EvilSetBonus = false;
-
-		//make the set bonus for the evil set bonus, where it has a 20% chance to fire an extra arrow when hitting an enemy
-        public override void OnHitAnything(float x, float y, Entity victim)
+		public bool HMT3SetBonus = false;
+		
+		public override void OnHitAnything(float x, float y, Entity victim)
         {
+			//make the set bonus for the evil set bonus, where it has a 20% chance to fire an extra arrow when hitting an enemy
 			if (EvilSetBonus && Main.rand.Next(1, 5) == 1)
             {
-				//Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position+new Vector2(0, 5), victim.DirectionFrom(Player.position)*30, ProjectileID.WoodenArrowFriendly, 10, 2f, Player.whoAmI);
-				Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position + new Vector2(0, 5), victim.DirectionFrom(Player.position) * 30, ModContent.ProjectileType<Glass_Shard>(), 10, 2f, Player.whoAmI);
-				Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position + new Vector2(0, 5), victim.DirectionFrom(Player.position) * 30, ProjectileID.StardustGuardian, 10, 2f, Player.whoAmI);
+				int pro = Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position, victim.DirectionFrom(Player.position) * 30, ModContent.ProjectileType<Glass_Shard>(), 10, 2f, Player.whoAmI);
+				Projectile.
 			}
+			if (HMT3SetBonus)
+            {
+				
+            }
             base.OnHitAnything(x, y, victim);
         }
 
         public override void ResetEffects()
         {
             EvilSetBonus = false;
-        }
+			HMT3SetBonus = false;
+	}
     }
 
 	public class GlassDamage : DamageClass
