@@ -35,11 +35,11 @@ namespace GlassCannonClass.Items.Armor.PreMechs
         //apply the set bonus
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.HMT3_Glass");
+            player.setBonus = Language.GetTextValue("Mods.GlassCannonClass.SetBonus.HMT3_Glass_Titamium");
             player.GetDamage(ModContent.GetInstance<GlassDamage>()) += 0.42f;
             player.GetCritChance(ModContent.GetInstance<GlassDamage>()) += 0.32f;
-            player.GetAttackSpeed(ModContent.GetInstance<GlassDamage>()) += 0.12f;
             player.GetModPlayer<GlassPlayer>().HMT3SetBonus = true;
+            player.GetModPlayer<GlassPlayer>().HMT3SetBonusTitanium = true;
         }
 
         public override void AddRecipes()

@@ -9,6 +9,7 @@ namespace GlassCannonClass.Projectiles
     {
 		public override void SetDefaults()
 		{
+			Projectile.netImportant = true;
 			Projectile.width = 16;
 			Projectile.height = 16;
 			Projectile.friendly = true;
