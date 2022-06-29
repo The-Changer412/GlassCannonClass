@@ -12,6 +12,7 @@ namespace GlassCannonClass.Projectiles
 		//set the name for the projectile
         public override void SetStaticDefaults()
         {
+			Main.projFrames[Projectile.type] = 2;
 			DisplayName.SetDefault("Titamium Repeater Projectile");
 			base.SetStaticDefaults();
         }
@@ -41,6 +42,18 @@ namespace GlassCannonClass.Projectiles
 			{
 				Projectile.position = player.position + new Vector2(4, -35);
 				Projectile.rotation = MathF.Atan2((Main.MouseWorld.Y - player.position.Y), (Main.MouseWorld.X - player.position.X));
+
+				//make the sprite flip correctly based on the rotation
+				if (Projectile.rotation < 1.60 && Projectile.rotation > -1.55)
+
+				{
+					Projectile.frame = 0;
+				}
+				else if (Projectile.rotation < -1.55 && Projectile.rotation > -3.14)
+
+				{
+					Projectile.frame = 1;
+				}
 			}
 			else
 			{

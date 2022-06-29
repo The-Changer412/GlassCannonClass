@@ -69,7 +69,7 @@ namespace GlassCannonClass
 			{
 				if ((pro.Name == "Adamanantite Repeater Projectile" || pro.Name == "Titamium Repeater Projectile") && pro.owner == Player.whoAmI)
 				{
-					Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -32), velocity * 30, ProjectileID.HellfireArrow, 80, 2f, Player.whoAmI);
+					Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -30), velocity * 30, ProjectileID.HellfireArrow, 82, 2f, Player.whoAmI);
 				}
 			}
 			return base.Shoot(item, source, position, velocity, type, damage, knockback);
