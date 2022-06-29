@@ -22,10 +22,10 @@ Mods: {
 			Gold_Glass_Pistol: "Gold Glass Pistol"
 			Platinum_Glass_Pistol: "Platinum Glass Pistol"
 
-			Musket_Glass: "Musket Glass Ammo"
-			Musket_Glass_Projectile: "Musket Glass Projectile"
-			Arrow_Glass: "Glass Arrow"
-			Arrow_Glass_Projectile: "Arrow Glass Projectile"
+			Glass_Musket: "Musket Glass Ammo"
+			Glass_Musket_Projectile: "Musket Glass Projectile"
+			Glass_Arrow: "Glass Arrow"
+			Glass_Arrow_Projectile: "Arrow Glass Projectile"
 
 			Demonite_Helmet: "Demonite Glass Helmet"
 			Demonite_Chestplate: "Demonite Glass Chestplate"
@@ -62,8 +62,8 @@ Mods: {
 			Gold_Glass_Pistol: "How did you made a pistol out of glass and gold?"
 			Platinum_Glass_Pistol: "How did you made a pistol out of glass and platinum?"
 			
-			Musket_Glass: "Uses as ammo for guns made out of glass.\nHow is this pratical to use?"
-			Arrow_Glass: "Uses as ammo for bows made out of glass.\nThis is going to hurt."
+			Glass_Musket: "Uses as ammo for guns made out of glass.\nHow is this pratical to use?"
+			Glass_Arrow: "Uses as ammo for bows made out of glass.\nThis is going to hurt."
 			
 			Demonite_Helmet: "How did you manage to put the evil in this glass?"
 			Demonite_Chestplate: "Now your chest is full of evil and glass shards when you get hit."

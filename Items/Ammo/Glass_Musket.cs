@@ -1,11 +1,11 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using GlassCannonClass.Projectiles.Other_Ammo;
+using GlassCannonClass.Projectiles.Bullets;
 
 namespace GlassCannonClass.Items.Ammo
 {
-    internal class Rock_Glass : ModItem
+    internal class Glass_Musket : ModItem
     {
         public override void SetDefaults()
         {
@@ -15,17 +15,17 @@ namespace GlassCannonClass.Items.Ammo
             Item.height = 16;
             Item.maxStack = 9999;
             Item.consumable = true;
-            Item.knockBack = 2f;
-            Item.ammo = ModContent.ItemType<Rock_Glass>();
-            Item.shoot = ModContent.ProjectileType<Rock_Glass_Projectile>();
+            Item.knockBack = 4f;
+            Item.ammo = ModContent.ItemType<Glass_Musket>();
+            Item.shoot = ModContent.ProjectileType<Glass_Musket_Projectile>();
         }
 
         public override void AddRecipes()
         {
-            //craft glass ammo from glass
+            //craft musket glass ammo from glass
             CreateRecipe()
                 .AddIngredient(ItemID.Glass, 1)
-                .AddIngredient(ItemID.StoneBlock, 1)
+                .AddIngredient(ItemID.MusketBall, 1)
                 .Register();
         }
     }

@@ -3,11 +3,12 @@ using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using GlassCannonClass.Projectiles;
+using GlassCannonClass.Projectiles.Other_Ammo;
+using GlassCannonClass.Projectiles.Set_Bonus;
 
 namespace GlassCannonClass
 {
-	public class GlassCannonClass : Mod
+    public class GlassCannonClass : Mod
 	{
 
 	}

@@ -1,11 +1,11 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using GlassCannonClass.Projectiles.Other_Ammo;
+using GlassCannonClass.Projectiles.Arrows;
 
 namespace GlassCannonClass.Items.Ammo
 {
-    internal class Rock_Glass : ModItem
+    internal class Glass_Arrow : ModItem
     {
         public override void SetDefaults()
         {
@@ -16,8 +16,8 @@ namespace GlassCannonClass.Items.Ammo
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 2f;
-            Item.ammo = ModContent.ItemType<Rock_Glass>();
-            Item.shoot = ModContent.ProjectileType<Rock_Glass_Projectile>();
+            Item.ammo = ModContent.ItemType<Glass_Arrow>();
+            Item.shoot = ModContent.ProjectileType<Glass_Arrow_Projectile>();
         }
 
         public override void AddRecipes()
@@ -25,7 +25,7 @@ namespace GlassCannonClass.Items.Ammo
             //craft glass ammo from glass
             CreateRecipe()
                 .AddIngredient(ItemID.Glass, 1)
-                .AddIngredient(ItemID.StoneBlock, 1)
+                .AddIngredient(ItemID.WoodenArrow, 1)
                 .Register();
         }
     }
