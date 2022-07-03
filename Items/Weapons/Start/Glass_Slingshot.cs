@@ -3,8 +3,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using GlassCannonClass.Items.Ammo;
 using GlassCannonClass.Projectiles.Other_Ammo;
+using GlassCannonClass.Items.Ammo.Others;
 
 namespace GlassCannonClass.Items.Weapons.Start
 {

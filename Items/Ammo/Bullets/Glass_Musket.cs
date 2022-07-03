@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using GlassCannonClass.Projectiles.Bullets;
 
-namespace GlassCannonClass.Items.Ammo
+namespace GlassCannonClass.Items.Ammo.Bullets
 {
     internal class Glass_Musket : ModItem
     {
@@ -16,7 +16,7 @@ namespace GlassCannonClass.Items.Ammo
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 4f;
-            Item.ammo = ModContent.ItemType<Glass_Musket>();
+            Item.ammo = 998;
             Item.shoot = ModContent.ProjectileType<Glass_Musket_Projectile>();
         }
 

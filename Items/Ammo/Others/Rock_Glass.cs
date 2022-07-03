@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using GlassCannonClass.Projectiles.Other_Ammo;
 
-namespace GlassCannonClass.Items.Ammo
+namespace GlassCannonClass.Items.Ammo.Others
 {
     internal class Rock_Glass : ModItem
     {

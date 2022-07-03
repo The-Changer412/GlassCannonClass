@@ -3,8 +3,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using GlassCannonClass.Items.Ammo;
 using GlassCannonClass.Projectiles.Bullets;
+using GlassCannonClass.Items.Ammo.Bullets;
 
 namespace GlassCannonClass.Items.Weapons.Pre_Boss
 {
@@ -18,8 +18,8 @@ namespace GlassCannonClass.Items.Weapons.Pre_Boss
             Item.useTime = 50;
             Item.width = 12;
             Item.height = 25;
-            Item.useAmmo = ModContent.ItemType<Glass_Musket>();
-            Item.shoot = ModContent.ProjectileType<Glass_Musket_Projectile>();
+            Item.useAmmo = 998;
+            Item.shoot = 998;
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 32;

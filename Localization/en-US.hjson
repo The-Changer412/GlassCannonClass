@@ -44,6 +44,11 @@ Mods: {
 			Titamium_Glass_Chestplate: "Titamium Glass Chestplate"
 			Titamium_Glass_Leggings: "Titamium Glass Leggings"
 			Titamium_Glass_Repeater: "Titamium Glass Repeater"
+
+			Cursed_Flame_Glass_Arrow: "Cursed Flame Glass Arrow"
+			Cursed_Flame_Glass_Arrow_Projectile: "Cursed Flame Glass Arrow Projectile"
+			Ichor_Glass_Arrow: "Ichor Glass Arrow"
+			Ichor_Glass_Arrow_Projectile: "Ichor Glass Arrow Projectile"
 		}
 
 		ItemTooltip:{ 

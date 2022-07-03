@@ -2,9 +2,6 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using GlassCannonClass.Items.Ammo;
-using GlassCannonClass.Projectiles.Arrows;
 
 namespace GlassCannonClass.Items.Weapons.Pre_Mechs
 {
@@ -18,8 +15,8 @@ namespace GlassCannonClass.Items.Weapons.Pre_Mechs
             Item.useTime = 24;
             Item.width = 12;
             Item.height = 25;
-            Item.useAmmo = ModContent.ItemType<Glass_Arrow>();
-            Item.shoot = ModContent.ProjectileType<Glass_Arrow_Projectile>();
+            Item.useAmmo = 999;
+            Item.shoot = 999;
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 78;
