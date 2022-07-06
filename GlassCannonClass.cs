@@ -13,7 +13,15 @@ namespace GlassCannonClass
 
 	}
 
-	public class ExampleGlobalNPC : GlobalNPC
+	public class ModifyGlobalProjectile: GlobalProjectile
+    {
+        public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
+        {
+            base.OnHitNPC(projectile, target, damage, knockback, crit);
+        }
+    }
+
+	public class ModifyGlobalNPC : GlobalNPC
 	{
 		public override void SetupShop(int type, Chest shop, ref int nextSlot)
 		{
@@ -33,6 +41,8 @@ namespace GlassCannonClass
 		public bool HMT3SetBonus = false;
 		public bool HMT3SetBonusAdamantite = false;
 		public bool HMT3SetBonusTitanium = false;
+		public bool ChlorophyteSetBonus = false;
+		public int ChlorophyteSetBonusCount = 0;
 
 		//spawn in the set bonus for hardmode tier 3 glass armor
 		public override void PostUpdate()
@@ -85,6 +95,20 @@ namespace GlassCannonClass
             {
 				Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position, victim.DirectionFrom(Player.position) * 30, ModContent.ProjectileType<Glass_Shard>(), 10, 2f, Player.whoAmI);
 			}
+
+			if (ChlorophyteSetBonus)
+            {
+				if (ChlorophyteSetBonusCount >= 4)
+                {
+					Projectile.NewProjectile(Player.GetSource_FromThis(), victim.position, Vector2.Zero, ProjectileID.Explosives, 180, 20);
+					ChlorophyteSetBonusCount = 0;
+
+				}
+				else
+                {
+					ChlorophyteSetBonusCount++;
+				}
+            }
             base.OnHitAnything(x, y, victim);
         }
 
@@ -94,7 +118,8 @@ namespace GlassCannonClass
 			HMT3SetBonus = false;
 			HMT3SetBonusAdamantite = false;
 			HMT3SetBonusTitanium = false;
-	}
+			ChlorophyteSetBonus = false;
+		}
     }
 
 	public class GlassDamage : DamageClass
