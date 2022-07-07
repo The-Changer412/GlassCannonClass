@@ -43,6 +43,7 @@ namespace GlassCannonClass
 		public bool HMT3SetBonusTitanium = false;
 		public bool ChlorophyteSetBonus = false;
 		public int ChlorophyteSetBonusCount = 0;
+		public bool BeetleSetBonus = false;
 
 		//spawn in the set bonus for hardmode tier 3 glass armor
 		public override void PostUpdate()
@@ -120,7 +121,8 @@ namespace GlassCannonClass
 			HMT3SetBonusAdamantite = false;
 			HMT3SetBonusTitanium = false;
 			ChlorophyteSetBonus = false;
-		}
+			BeetleSetBonus = false;
+	}
     }
 
 	public class GlassDamage : DamageClass

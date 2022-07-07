@@ -55,6 +55,10 @@ Mods: {
 			Chlorophyte_Glass_Leggings: "Chlorophyte Glass Leggings"
 			Chlorophyte_Glass_Flintlock_Pistol: "Chlorophyte Glass Flintlock Pistol"
 			Chlorophyte_Glass: "Chlorophyte Glass Bullet"
+
+			Beetle_Glass_Helmet: "Beetle Glass Helmet"
+			Beetle_Glass_Chestplate: "Beetle Glass Chestplate"
+			Beetle_Glass_Leggings: "Beetle Glass Leggings"
 		}
 
 		ItemTooltip:{ 
@@ -99,6 +103,10 @@ Mods: {
 			Chlorophyte_Glass_Leggings: "How does it feel to wear leggings made out of glass and Underground Jungle?"
 			Chlorophyte_Glass_Flintlock_Pistol: "A glass pistol made with the Underground Jungle."
 
+			Beetle_Glass_Helmet: "You made a helmet with the parts of the weakest tile, and parts of the strongest foe."
+			Beetle_Glass_Chestplate: "You are now partly protected with the materials of the strongest foe."
+			Beetle_Glass_Leggings: "How does it feel to walk with parts made out of the strongest foe?"
+
 		}
 
 		SetBonus: {
@@ -110,6 +118,7 @@ Mods: {
 			HMT3_Glass_Adamantite: "You can now use glass weapons.\n42% increase glass damage.\n32% increase crit chance.\nA floating Adamanantite Repeater follows you and shoot Hellfire Arrows whenever you shoot.\nYou just made a full armor set with one of the hardest materials and with the one of the weakest materials."
 			HMT3_Glass_Titamium: "You can now use glass weapons.\n42% increase glass damage.\n32% increase crit chance.\nA floating Titanium Repeater follows you and shoot Hellfire Arrows whenever you shoot.\nYou just made a full armor set with one of the hardest materials and with the one of the weakest materials."
 			Chlorophyte_Glass: "You can now use glass weapons.\n48% increase glass damage.\n38% increase crit chance.\nEvery fifth hit will cause an explosion (You can be damage from the explosion, so be careful.).\nJust because you made your armor with the Underground Jungle doesn't mean you're going to easily survive the Underground Jungle."
+			Beetle_Glass: "You can now use glass weapons.\n54% increase glass damage.\n52% increase crit chance.\nA Golem Head follow you and shoots lazers at any hostile nearby.\n The strongest foe in the world is now protecting you."
 		}
 	}
 }
