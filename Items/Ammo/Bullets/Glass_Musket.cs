@@ -29,4 +29,29 @@ namespace GlassCannonClass.Items.Ammo.Bullets
                 .Register();
         }
     }
+
+    internal class Chlorophyte_Glass : ModItem
+    {
+        public override void SetDefaults()
+        {
+            //set the stats for glass
+            base.SetDefaults();
+            Item.width = 16;
+            Item.height = 16;
+            Item.maxStack = 9999;
+            Item.consumable = true;
+            Item.knockBack = 4f;
+            Item.ammo = 998;
+            Item.shoot = ModContent.ProjectileType<Chlorophyte_Glass_Bullet>();
+        }
+
+        public override void AddRecipes()
+        {
+            //craft musket glass ammo from glass
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<Glass_Musket>(), 60)
+                .AddIngredient(ItemID.ChlorophyteBar, 1)
+                .Register();
+        }
+    }
 }

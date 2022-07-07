@@ -49,8 +49,8 @@ namespace GlassCannonClass.Items.Ammo.Arrows
         {
             //craft glass ammo from glass
             CreateRecipe()
-                .AddIngredient(ItemID.Glass, 1)
-                .AddIngredient(ItemID.CursedArrow, 150)
+                .AddIngredient(ItemID.CursedFlame, 1)
+                .AddIngredient(ModContent.ItemType<Glass_Arrow>(), 150)
                 .Register();
         }
     }
@@ -74,8 +74,8 @@ namespace GlassCannonClass.Items.Ammo.Arrows
         {
             //craft glass ammo from glass
             CreateRecipe()
-                .AddIngredient(ItemID.Glass, 1)
-                .AddIngredient(ItemID.IchorArrow, 150)
+                .AddIngredient(ItemID.Ichor, 1)
+                .AddIngredient(ModContent.ItemType<Glass_Arrow>(), 150)
                 .Register();
         }
     }

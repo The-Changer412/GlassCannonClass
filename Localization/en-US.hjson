@@ -53,6 +53,8 @@ Mods: {
 			Chlorophyte_Glass_Helmet: "Chlorophyte Glass Helmet"
 			Chlorophyte_Glass_Chestplate: "Chlorophyte Glass Chestplate"
 			Chlorophyte_Glass_Leggings: "Chlorophyte Glass Leggings"
+			Chlorophyte_Glass_Flintlock_Pistol: "Chlorophyte Glass Flintlock Pistol"
+			Chlorophyte_Glass: "Chlorophyte Glass Bullet"
 		}
 
 		ItemTooltip:{ 
@@ -95,6 +97,7 @@ Mods: {
 			Chlorophyte_Glass_Helmet: "A Glass Helmet made out of Underground Jungle."
 			Chlorophyte_Glass_Chestplate: "So how is glass made out of the Underground Jungle going to protect your chest?"
 			Chlorophyte_Glass_Leggings: "How does it feel to wear leggings made out of glass and Underground Jungle?"
+			Chlorophyte_Glass_Flintlock_Pistol: "A glass pistol made with the Underground Jungle."
 
 		}
 
@@ -106,7 +109,7 @@ Mods: {
 			Demonite_Glass: "You can now use glass weapons.\n25% increase glass damage.\n20% increase crit chance.\nHitting an enemy has a 20% chance of firing a glass shard torwards the enemy.\nYou are now using the power of evil and glass to protect yourself."
 			HMT3_Glass_Adamantite: "You can now use glass weapons.\n42% increase glass damage.\n32% increase crit chance.\nA floating Adamanantite Repeater follows you and shoot Hellfire Arrows whenever you shoot.\nYou just made a full armor set with one of the hardest materials and with the one of the weakest materials."
 			HMT3_Glass_Titamium: "You can now use glass weapons.\n42% increase glass damage.\n32% increase crit chance.\nA floating Titanium Repeater follows you and shoot Hellfire Arrows whenever you shoot.\nYou just made a full armor set with one of the hardest materials and with the one of the weakest materials."
-			Chlorophyte_Glass: "You can now use glass weapons.\n48% increase glass damage.\n38% increase crit chance.\nEvery fifth shot will cause an explosion (You can be damage from the explosion, so be careful.).\nJust because you made your armor with the Underground Jungle doesn't mean you're going to easily survive the Underground Jungle."
+			Chlorophyte_Glass: "You can now use glass weapons.\n48% increase glass damage.\n38% increase crit chance.\nEvery fifth hit will cause an explosion (You can be damage from the explosion, so be careful.).\nJust because you made your armor with the Underground Jungle doesn't mean you're going to easily survive the Underground Jungle."
 		}
 	}
 }

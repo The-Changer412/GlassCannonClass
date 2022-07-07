@@ -96,6 +96,7 @@ namespace GlassCannonClass
 				Projectile.NewProjectile(Player.GetSource_OnHit(victim), Player.position, victim.DirectionFrom(Player.position) * 30, ModContent.ProjectileType<Glass_Shard>(), 10, 2f, Player.whoAmI);
 			}
 
+			//make it to where if you have the set bonus for chlorophyte, then you will spawn in a explosion every 5 hits
 			if (ChlorophyteSetBonus)
             {
 				if (ChlorophyteSetBonusCount >= 4)
