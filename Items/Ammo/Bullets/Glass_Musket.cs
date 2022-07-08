@@ -48,7 +48,7 @@ namespace GlassCannonClass.Items.Ammo.Bullets
         public override void AddRecipes()
         {
             //craft musket glass ammo from glass
-            CreateRecipe()
+            CreateRecipe(60)
                 .AddIngredient(ModContent.ItemType<Glass_Musket>(), 60)
                 .AddIngredient(ItemID.ChlorophyteBar, 1)
                 .Register();

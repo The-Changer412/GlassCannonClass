@@ -70,6 +70,8 @@ Mods: {
 			Beetle_Glass_Helmet: "Beetle Glass Helmet"
 			Beetle_Glass_Chestplate: "Beetle Glass Chestplate"
 			Beetle_Glass_Leggings: "Beetle Glass Leggings"
+			Beetle_Glass_Cannon: "Beetle Glass Cannon"
+			Glass_Rocket_1: "Glass Rocket I"
 		}
 
 		ItemTooltip:{ 
@@ -117,6 +119,8 @@ Mods: {
 			Beetle_Glass_Helmet: "You made a helmet with the parts of the weakest tile, and parts of the strongest foe."
 			Beetle_Glass_Chestplate: "You are now partly protected with the materials of the strongest foe."
 			Beetle_Glass_Leggings: "How does it feel to walk with parts made out of the strongest foe?"
+			Beetle_Glass_Cannon: "You are now using a weapon made with materials out of the strongest foe."
+			Glass_Rocket_1: "A rocket made out of glass. Why?"
 
 		}
 

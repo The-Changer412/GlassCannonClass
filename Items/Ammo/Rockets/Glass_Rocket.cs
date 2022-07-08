@@ -1,31 +1,31 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using GlassCannonClass.Projectiles.Other_Ammo;
+using GlassCannonClass.Projectiles.Rockets;
 
-namespace GlassCannonClass.Items.Ammo.Others
+namespace GlassCannonClass.Items.Ammo.Rockets
 {
-    internal class Rock_Glass : ModItem
+    internal class Glass_Rocket_1 : ModItem
     {
         public override void SetDefaults()
         {
-            //set the stats for glass
+            //set the stats for glass 
             base.SetDefaults();
-            Item.width = 16;
-            Item.height = 16;
+            Item.width = 18;
+            Item.height = 14;
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 2f;
-            Item.ammo = ModContent.ItemType<Rock_Glass>();
-            Item.shoot = ModContent.ProjectileType<Rock_Glass_Projectile>();
+            Item.ammo = 997;
+            Item.shoot = ModContent.ProjectileType<Glass_Rocket_1_Projectile>();
         }
 
         public override void AddRecipes()
         {
             //craft glass ammo from glass
-            CreateRecipe(10)
+            CreateRecipe(100)
                 .AddIngredient(ItemID.Glass, 1)
-                .AddIngredient(ItemID.StoneBlock, 1)
+                .AddIngredient(ItemID.RocketI, 100)
                 .Register();
         }
     }
