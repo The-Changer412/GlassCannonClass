@@ -8,11 +8,7 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
 {
     internal class Golem_Head_Projectile : ModProjectile
     {
-
-        public float distanceFromTarget;
-        public Vector2 targetCenter;
-        public bool foundTarget;
-        public int maxCooldown;
+        public int MaxCooldown;
         public int cooldown;
         public override void SetDefaults()
         {
@@ -26,16 +22,17 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
             Projectile.usesLocalNPCImmunity = true;
-            float distanceFromTarget = 700f;
-            Vector2 targetCenter = Projectile.position;
-            bool foundTarget = false;
-            maxCooldown = 30;
-            cooldown = maxCooldown;
+            
+            MaxCooldown = 40;
+            cooldown = MaxCooldown;
         }
-
 
         public override void AI()
         {
+            float SeeRange = 200f;
+            Vector2 TargetPos = Projectile.position;
+            bool FoundTarget = false;
+
             //check if the player is dead and if the set bonus is active. if so, the constanly move and hover. if not, then kill it.
             Player player = Main.player[Projectile.owner];
             if (!player.dead && player.GetModPlayer<GlassPlayer>().BeetleSetBonus)
@@ -47,56 +44,46 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
                 Projectile.Kill();
             }
 
-            if(cooldown >= 0)
+            //set the cooldown for the projectile
+            if (cooldown >= 0)
             {
                 cooldown--;
-            } else
-            {
-                cooldown = maxCooldown;
             }
-            
-        }
 
-        public override void PostAI()
-        {
-            if (!foundTarget)
+            //find the closest enemy to shoot at
+            if (!FoundTarget)
             {
-                // This code is required either way, used for finding a target
+                //iter between all npcs
                 for (int i = 0; i < Main.maxNPCs; i++)
                 {
                     NPC npc = Main.npc[i];
-
-                    
+                    //check if enemy
                     if (npc.CanBeChasedBy())
-                    {
-                        float between = Vector2.Distance(npc.Center, Projectile.Center);
-                        bool closest = Vector2.Distance(Projectile.Center, targetCenter) > between;
-                        bool inRange = between < distanceFromTarget;
+                    { 
+                        float dis = Vector2.Distance(npc.Center, Projectile.Center);
+                        bool closest = Vector2.Distance(Projectile.Center, TargetPos) > dis;
+                        bool inRange = dis < SeeRange;
                         bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
-                        // Additional check for this specific minion behavior, otherwise it will stop attacking once it dashed through an enemy while flying though tiles afterwards
-                        // The number depends on various parameters seen in the movement code below. Test different ones out until it works alright
-                        bool closeThroughWall = between < 100f;
+                        bool closeThroughWall = dis < 100f;
 
-                        if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
+                        if (((closest && inRange) || !FoundTarget) && (lineOfSight || closeThroughWall))
                         {
-                            distanceFromTarget = between;
-                            targetCenter = npc.Center;
-                            foundTarget = true;
+                            SeeRange = dis;
+                            TargetPos = npc.Center;
+                            FoundTarget = true;
                         }
                     }
                 }
             }
 
-            if (foundTarget)
+            if (FoundTarget)
             {
-                System.Console.WriteLine("Communist Targeted");
                 if (Main.myPlayer == Projectile.owner && cooldown <= 0)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center + new Vector2(22, 50), Projectile.DirectionTo(targetCenter)*20, ProjectileID.EyeBeam, 150, 0f, Projectile.whoAmI);
+                    Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center + new Vector2(25, 16), Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 0f, Projectile.whoAmI);
+                    cooldown = MaxCooldown;
                 }
             }
-
-            base.PostAI();
         }
     }
 }

@@ -5,6 +5,8 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using GlassCannonClass.Projectiles.Other_Ammo;
 using GlassCannonClass.Projectiles.Set_Bonus;
+using GlassCannonClass.Buffs;
+using System.Collections.Generic;
 
 namespace GlassCannonClass
 {
@@ -16,11 +18,20 @@ namespace GlassCannonClass
 	//make a friendly version of golem's lazer
 	public class ModifyGlobalProjectile : GlobalProjectile
 	{
+		public override void SetDefaults(Projectile projectile)
+		{
+			if (projectile.type == ProjectileID.EyeBeam && projectile.damage != 28)
+			{
+				projectile.timeLeft = 100;
+				projectile.velocity *= 3;
+			}
+			base.SetDefaults(projectile);
+		}
+
         public override bool? CanHitNPC(Projectile projectile, NPC target)
         {
 			if (projectile.type == ProjectileID.EyeBeam && projectile.damage != 28)
             {
-				System.Console.WriteLine(projectile.damage);
                 if (target.friendly)
                 {
                     return false;
@@ -82,66 +93,35 @@ namespace GlassCannonClass
 			//spawn in the set bonus for hardmode tier 3 glass armor
 			if (HMT3SetBonus)
 			{
-				//check if the set bonus have been spawned in before
-				bool HMT3SetBonusHaveSpawned = false;
-				foreach (Projectile pro in Main.projectile)
-				{
-					if ((pro.type == ModContent.ProjectileType<Adamantite_Repeater_Projectile>() || pro.type == ModContent.ProjectileType<Titanium_Repeater_Projectile>()) && pro.owner == Player.whoAmI)
-					{
-						HMT3SetBonusHaveSpawned = true;
-					}
-				}
-				//spawn in the floating repeater based on the armor set
-				if (HMT3SetBonusHaveSpawned == false)
+				//spawn in adamantite repeater if the player does not have the buff
+				if (HMT3SetBonusAdamantite && !Player.HasBuff<Floating_Adamantite_Repeater>())
                 {
-					if (HMT3SetBonusAdamantite)
-                    {
-						Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Adamantite_Repeater_Projectile>(), 0, 0f, Player.whoAmI);
-					}
-					else if (HMT3SetBonusTitanium)
-                    {
-						Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Titanium_Repeater_Projectile>(), 0, 0f, Player.whoAmI);
-					}
+					Player.AddBuff(ModContent.BuffType<Floating_Adamantite_Repeater>(), 2);
+					Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Adamantite_Repeater_Projectile>(), 0, 0f, Player.whoAmI);
+				}
+
+				//spawn in adamantite repeater if the player does not have the buff
+				if (HMT3SetBonusTitanium && !Player.HasBuff<Floating_Titanium_Repeater>())
+				{
+					Player.AddBuff(ModContent.BuffType<Floating_Titanium_Repeater>(), 2);
+					Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Titanium_Repeater_Projectile>(), 0, 0f, Player.whoAmI);
 				}
 			}
 
 			//spawn in the set bonus for beetle glass armor
-			if (BeetleSetBonus)
+			if (BeetleSetBonus && !Player.HasBuff<Golem_Head_Buff>())
 			{
-				//check if the set bonus have been spawned in before
-				bool BeetleSetBonusHaveSpawned = false;
-				foreach (Projectile pro in Main.projectile)
-				{
-					if ((pro.type == ModContent.ProjectileType<Golem_Head_Projectile>()) && pro.owner == Player.whoAmI)
-					{
-						BeetleSetBonusHaveSpawned = true;
-					}
-				}
-				//spawn in the floating golem head
-				if (BeetleSetBonusHaveSpawned == false)
-				{
-					Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Golem_Head_Projectile>(), 0, 0f, Player.whoAmI);
-				}
-
-				//foreach (Golem_Head_Projectile pro in ModContent.GetContent<Golem_Head_Projectile>())
-    //            {
-				//	if (pro.foundTarget)
-    //                {
-				//		Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), pro.position + new Vector2(50, 50), Projectile.DirectionTo(pro.targetCenter), ModContent.ProjectileType<Golem_Eye_Beam>(), 20, 0f, Projectile.whoAmI);
-				//	}
-    //            }
+				Player.AddBuff(ModContent.BuffType<Golem_Head_Buff>(), 2);
+				Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Golem_Head_Projectile>(), 0, 0f, Player.whoAmI);
 			}
 		}
 
         public override bool Shoot(Item item, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-			//if the player have a floating repeater, then make the repeater shoot hellfire arrow when the player shoot
-			foreach (Projectile pro in Main.projectile)
-			{
-				if ((pro.type == ModContent.ProjectileType<Adamantite_Repeater_Projectile>() || pro.type == ModContent.ProjectileType<Titanium_Repeater_Projectile>())  && pro.owner == Player.whoAmI)
-				{
-					Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -30), velocity * 30, ProjectileID.HellfireArrow, 82, 2f, Player.whoAmI);
-				}
+			//if the player have a floating repeater buff, then make the repeater shoot hellfire arrow when the player shoot
+			if (Player.HasBuff<Floating_Adamantite_Repeater>() || Player.HasBuff<Floating_Titanium_Repeater>())
+            {
+				Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -30), velocity * 30, ProjectileID.HellfireArrow, 82, 2f, Player.whoAmI);
 			}
 			return base.Shoot(item, source, position, velocity, type, damage, knockback);
 

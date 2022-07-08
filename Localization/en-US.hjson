@@ -5,6 +5,17 @@ Mods: {
 			GlassDamage: "glass damage"
 		}
 
+		BuffName: {
+			Floating_Adamantite_Repeater: "Floating Adamantite Repeater"
+			Floating_Titanium_Repeater: "Floating Titanium Repeater"
+			Golem_Head_Buff: "Golem Head"
+		}
+		BuffDescription: {
+			Floating_Adamantite_Repeater: "A floating adamantite repeater follows you and shoot Hellfire Arrows whenever you shoot."
+			Floating_Titanium_Repeater: "A floating Titanium repeater follows you and shoot Hellfire Arrows whenever you shoot."
+			Golem_Head_Buff: "A Golem Head follows you, and shoots lazers at nearby enemies."
+		}
+
 		ItemName: {
 			Glass_Helmet: "Glass Helmet"
 			Glass_Chestplate: "Glass Chestplate"
