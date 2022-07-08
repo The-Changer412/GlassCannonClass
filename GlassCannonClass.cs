@@ -13,12 +13,44 @@ namespace GlassCannonClass
 
 	}
 
-	public class ModifyGlobalProjectile: GlobalProjectile
-    {
-        public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
+	//make a friendly version of golem's lazer
+	public class ModifyGlobalProjectile : GlobalProjectile
+	{
+        public override bool? CanHitNPC(Projectile projectile, NPC target)
         {
-            base.OnHitNPC(projectile, target, damage, knockback, crit);
+			if (projectile.type == ProjectileID.EyeBeam && projectile.damage != 28)
+            {
+				System.Console.WriteLine(projectile.damage);
+                if (target.friendly)
+                {
+                    return false;
+                }
+                else if (target.CanBeChasedBy())
+                {
+                    return true;
+                }
+				else
+                {
+					return null;
+                }
+            }
+			else
+            {
+				return null;
+            }
         }
+
+        public override bool CanHitPlayer(Projectile projectile, Player target)
+        {
+			if (projectile.type == ProjectileID.EyeBeam && projectile.damage != 28)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
     }
 
 	public class ModifyGlobalNPC : GlobalNPC
@@ -45,16 +77,16 @@ namespace GlassCannonClass
 		public int ChlorophyteSetBonusCount = 0;
 		public bool BeetleSetBonus = false;
 
-		//spawn in the set bonus for hardmode tier 3 glass armor
 		public override void PostUpdate()
         {
+			//spawn in the set bonus for hardmode tier 3 glass armor
 			if (HMT3SetBonus)
 			{
 				//check if the set bonus have been spawned in before
 				bool HMT3SetBonusHaveSpawned = false;
 				foreach (Projectile pro in Main.projectile)
 				{
-					if ((pro.Name == "Adamanantite Repeater Projectile" || pro.Name == "Titamium Repeater Projectile") && pro.owner == Player.whoAmI)
+					if ((pro.type == ModContent.ProjectileType<Adamantite_Repeater_Projectile>() || pro.type == ModContent.ProjectileType<Titanium_Repeater_Projectile>()) && pro.owner == Player.whoAmI)
 					{
 						HMT3SetBonusHaveSpawned = true;
 					}
@@ -72,6 +104,33 @@ namespace GlassCannonClass
 					}
 				}
 			}
+
+			//spawn in the set bonus for beetle glass armor
+			if (BeetleSetBonus)
+			{
+				//check if the set bonus have been spawned in before
+				bool BeetleSetBonusHaveSpawned = false;
+				foreach (Projectile pro in Main.projectile)
+				{
+					if ((pro.type == ModContent.ProjectileType<Golem_Head_Projectile>()) && pro.owner == Player.whoAmI)
+					{
+						BeetleSetBonusHaveSpawned = true;
+					}
+				}
+				//spawn in the floating golem head
+				if (BeetleSetBonusHaveSpawned == false)
+				{
+					Projectile.NewProjectile(Player.GetSource_FromThis(), Player.position, Vector2.Zero, ModContent.ProjectileType<Golem_Head_Projectile>(), 0, 0f, Player.whoAmI);
+				}
+
+				//foreach (Golem_Head_Projectile pro in ModContent.GetContent<Golem_Head_Projectile>())
+    //            {
+				//	if (pro.foundTarget)
+    //                {
+				//		Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), pro.position + new Vector2(50, 50), Projectile.DirectionTo(pro.targetCenter), ModContent.ProjectileType<Golem_Eye_Beam>(), 20, 0f, Projectile.whoAmI);
+				//	}
+    //            }
+			}
 		}
 
         public override bool Shoot(Item item, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -79,7 +138,7 @@ namespace GlassCannonClass
 			//if the player have a floating repeater, then make the repeater shoot hellfire arrow when the player shoot
 			foreach (Projectile pro in Main.projectile)
 			{
-				if ((pro.Name == "Adamanantite Repeater Projectile" || pro.Name == "Titamium Repeater Projectile") && pro.owner == Player.whoAmI)
+				if ((pro.type == ModContent.ProjectileType<Adamantite_Repeater_Projectile>() || pro.type == ModContent.ProjectileType<Titanium_Repeater_Projectile>())  && pro.owner == Player.whoAmI)
 				{
 					Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -30), velocity * 30, ProjectileID.HellfireArrow, 82, 2f, Player.whoAmI);
 				}
@@ -102,7 +161,7 @@ namespace GlassCannonClass
             {
 				if (ChlorophyteSetBonusCount >= 4)
                 {
-					Projectile.NewProjectile(Player.GetSource_FromThis(), victim.position, Vector2.Zero, ProjectileID.Explosives, 180, 20);
+					Projectile.NewProjectile(Player.GetSource_FromThis(), victim.position, Vector2.Zero, ProjectileID.Explosives, 230, 20);
 					ChlorophyteSetBonusCount = 0;
 
 				}
@@ -122,7 +181,7 @@ namespace GlassCannonClass
 			HMT3SetBonusTitanium = false;
 			ChlorophyteSetBonus = false;
 			BeetleSetBonus = false;
-	}
+		}
     }
 
 	public class GlassDamage : DamageClass

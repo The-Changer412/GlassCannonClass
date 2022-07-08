@@ -9,11 +9,10 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
     internal class Adamantite_Repeater_Projectile : ModProjectile
     {
 
-        //set the name for the projectile
+        //set the sprite for the projectile
         public override void SetStaticDefaults()
         {
             Main.projFrames[Projectile.type] = 2;
-            DisplayName.SetDefault("Adamanantite Repeater Projectile");
             base.SetStaticDefaults();
         }
 
