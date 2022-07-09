@@ -58,7 +58,7 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
                 {
                     NPC npc = Main.npc[i];
                     //check if enemy
-                    if (npc.CanBeChasedBy())
+                    if (npc.CanBeChasedBy() || !Main.npc[i].townNPC || !Main.npc[i].friendly)
                     { 
                         float dis = Vector2.Distance(npc.Center, Projectile.Center);
                         bool closest = Vector2.Distance(Projectile.Center, TargetPos) > dis;
@@ -80,7 +80,7 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
             {
                 if (Main.myPlayer == Projectile.owner && cooldown <= 0)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center + new Vector2(25, 16), Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 0f, Projectile.whoAmI);
+                    Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 0f, Projectile.whoAmI);
                     cooldown = MaxCooldown;
                 }
             }
