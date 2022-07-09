@@ -5,6 +5,20 @@ Mods: {
 			GlassDamage: "glass damage"
 		}
 
+		ItemGroup: {
+			Pre_Boss_Helmet: "Gold/Platinum Glass Helmet"
+			Pre_Boss_Chestplate: "Gold/Platinum Glass Chestplate"
+			Pre_Boss_Leggings: "Gold/Platinum Glass Leggings"
+
+			Pre_HM_Helmet: "Demonite/Crimtane Glass Helmet"
+			Pre_HM_Chestplate: "Demonite/Crimtane Glass Chestplate"
+			Pre_HM_Leggings: "Demonite/Crimtane Glass Leggings"
+
+			Pre_Mechs_Helmet: "Adamantite/Titamium Glass Helmet"
+			Pre_Mechs_Chestplate: "Adamantite/Titamium Glass Chestplate"
+			Pre_Mechs_Leggings: "Adamantite/Titamium Glass Leggings"
+		}
+
 		BuffName: {
 			Floating_Adamantite_Repeater: "Floating Adamantite Repeater"
 			Floating_Titanium_Repeater: "Floating Titanium Repeater"
@@ -72,6 +86,12 @@ Mods: {
 			Beetle_Glass_Leggings: "Beetle Glass Leggings"
 			Beetle_Glass_Cannon: "Beetle Glass Cannon"
 			Glass_Rocket_1: "Glass Rocket I"
+
+			Luminite_Glass_Helmet: "Luminite Glass Helmet"
+			Luminite_Glass_Chestplate: "Luminite Glass Chestplate"
+			Luminite_Glass_Leggings: "Luminite Glass Leggings"
+			Luminite_Glass_Cannon: "Luminite Glass Cannon"
+			Glass_Rocket_1: "Glass Rocket I"
 		}
 
 		ItemTooltip:{ 
@@ -122,6 +142,12 @@ Mods: {
 			Beetle_Glass_Cannon: "You are now using a weapon made with materials out of the strongest foe."
 			Glass_Rocket_1: "A rocket made out of glass. Why?"
 
+			Luminite_Glass_Helmet: "You're not going to be grabbing people with a tentacle when you equip this."
+			Luminite_Glass_Chestplate: "Exposed core not included."
+			Luminite_Glass_Leggings: "How does it feel to make legs from a foe that dosen't have one?"
+			Luminite_Glass_Cannon: "Luminite Glass Cannon"
+			Glass_Rocket_1: "Glass Rocket I"
+
 		}
 
 		SetBonus: {
@@ -134,6 +160,7 @@ Mods: {
 			HMT3_Glass_Titamium: "You can now use glass weapons.\n42% increase glass damage.\n32% increase crit chance.\nA floating Titanium Repeater follows you and shoot Hellfire Arrows whenever you shoot.\nYou just made a full armor set with one of the hardest materials and with the one of the weakest materials."
 			Chlorophyte_Glass: "You can now use glass weapons.\n48% increase glass damage.\n38% increase crit chance.\nEvery fifth hit will cause an explosion (You can be damage from the explosion, so be careful.).\nJust because you made your armor with the Underground Jungle doesn't mean you're going to easily survive the Underground Jungle."
 			Beetle_Glass: "You can now use glass weapons.\n54% increase glass damage.\n52% increase crit chance.\nA Golem Head follow you and shoots lazers at any hostile nearby.\n The strongest foe in the world is now protecting you."
+			Luminite_Glass: "You can now use glass weapons.\n64% increase glass damage.\n64% increase crit chance.\nAll of the previous's set bonuses are applyed with this armor, and they're stronger then before. \nEyeballs not included."
 		}
 	}
 }

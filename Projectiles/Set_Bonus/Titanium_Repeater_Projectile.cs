@@ -39,7 +39,14 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
             Player player = Main.player[Projectile.owner];
             if (!player.dead && player.GetModPlayer<GlassPlayer>().HMT3SetBonus)
             {
-                Projectile.position = player.position + new Vector2(4, -35);
+                if (player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
+                {
+                    Projectile.position = player.position + new Vector2(4, -60);
+                }
+                else
+                {
+                    Projectile.position = player.position + new Vector2(4, -35);
+                }
                 Projectile.rotation = MathF.Atan2(Main.MouseWorld.Y - player.position.Y, Main.MouseWorld.X - player.position.X);
 
                 //make the sprite flip correctly based on the rotation
