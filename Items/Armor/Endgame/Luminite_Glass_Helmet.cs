@@ -20,7 +20,7 @@ namespace GlassCannonClass.Items.Armor.Endgame
             //set the stats for the item
             Item.width = 18;
             Item.height = 18;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ItemRarityID.Red;
             Item.value = Item.sellPrice(0, 2, 0, 0);
             Item.defense = 7;
             base.SetDefaults();

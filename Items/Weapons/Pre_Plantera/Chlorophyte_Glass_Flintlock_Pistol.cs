@@ -17,14 +17,15 @@ namespace GlassCannonClass.Items.Weapons.Pre_Plantera
             Item.height = 25;
             Item.useAmmo = 998;
             Item.shoot = 998;
-            Item.UseSound = SoundID.Item5;
+            Item.UseSound = SoundID.Item11;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 140;
+            Item.damage = 142;
             Item.crit += 30;
             Item.shootSpeed = 56f;
             Item.noMelee = true;
             Item.autoReuse = true;
-            Item.value = Item.sellPrice(0, 1, 30, 0);
+            Item.rare = ItemRarityID.Lime;
+            Item.value = Item.sellPrice(0, 1, 60, 0);
             Item.scale = 0.8f;
         }
 

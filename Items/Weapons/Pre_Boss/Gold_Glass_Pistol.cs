@@ -3,8 +3,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using GlassCannonClass.Projectiles.Bullets;
-using GlassCannonClass.Items.Ammo.Bullets;
 
 namespace GlassCannonClass.Items.Weapons.Pre_Boss
 {
@@ -20,14 +18,15 @@ namespace GlassCannonClass.Items.Weapons.Pre_Boss
             Item.height = 25;
             Item.useAmmo = 998;
             Item.shoot = 998;
-            Item.UseSound = SoundID.Item5;
+            Item.UseSound = SoundID.Item11;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 32;
+            Item.damage = 34;
             Item.crit += 8;
             Item.shootSpeed = 30f;
             Item.noMelee = true;
             Item.autoReuse = true;
-            Item.value = Item.sellPrice(0, 0, 30, 0);
+            Item.rare = ItemRarityID.Blue;
+            Item.value = Item.sellPrice(0, 0, 40, 0);
             Item.scale = 0.8f;
         }
 

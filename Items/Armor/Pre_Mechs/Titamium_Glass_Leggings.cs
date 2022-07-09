@@ -20,7 +20,7 @@ namespace GlassCannonClass.Items.Armor.Pre_Mechs
             //set the stats for the item
             Item.width = 18;
             Item.height = 18;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ItemRarityID.LightRed;
             Item.value = Item.sellPrice(0, 1, 20, 0);
             Item.defense = 4;
             base.SetDefaults();

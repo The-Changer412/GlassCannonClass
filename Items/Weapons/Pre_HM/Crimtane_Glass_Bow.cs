@@ -2,9 +2,6 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using GlassCannonClass.Projectiles.Arrows;
-using GlassCannonClass.Items.Ammo.Arrows;
 
 namespace GlassCannonClass.Items.Weapons.Pre_HM
 {
@@ -22,11 +19,12 @@ namespace GlassCannonClass.Items.Weapons.Pre_HM
             Item.shoot = 999;
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 52;
+            Item.damage = 56;
             Item.crit += 14;
             Item.shootSpeed = 30f;
             Item.noMelee = true;
             Item.autoReuse = true;
+            Item.rare = ItemRarityID.Orange;
             Item.value = Item.sellPrice(0, 0, 80, 0);
             Item.scale = 0.8f;
         }

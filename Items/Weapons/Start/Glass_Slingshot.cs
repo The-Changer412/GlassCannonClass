@@ -20,9 +20,9 @@ namespace GlassCannonClass.Items.Weapons.Start
             Item.height = 25;
             Item.useAmmo = ModContent.ItemType<Rock_Glass>();
             Item.shoot = ModContent.ProjectileType<Rock_Glass_Projectile>();
-            Item.UseSound = SoundID.Item5;
+            Item.UseSound = SoundID.Item1;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 16;
+            Item.damage = 18;
             Item.crit += 4;
             Item.shootSpeed = 30f;
             Item.noMelee = true;

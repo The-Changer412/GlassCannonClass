@@ -17,13 +17,14 @@ namespace GlassCannonClass.Items.Weapons.Endgame
             Item.height = 32;
             Item.useAmmo = 997;
             Item.shoot = 997;
-            Item.UseSound = SoundID.Item5;
+            Item.UseSound = SoundID.Item11;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 200;
-            Item.crit += 38;
+            Item.damage = 308;
+            Item.crit += 42;
             Item.shootSpeed = 62f;
             Item.noMelee = true;
             Item.autoReuse = true;
+            Item.rare = ItemRarityID.Red;
             Item.value = Item.sellPrice(0, 2, 0, 0);
             Item.scale = 0.8f;
         }

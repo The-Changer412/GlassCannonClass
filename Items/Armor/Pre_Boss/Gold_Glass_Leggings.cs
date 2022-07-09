@@ -20,8 +20,8 @@ namespace GlassCannonClass.Items.Armor.Pre_Boss
             //set the stats for the item
             Item.width = 18;
             Item.height = 18;
-            Item.rare = ItemRarityID.White;
-            Item.value = Item.sellPrice(0, 0,40, 0);
+            Item.rare = ItemRarityID.Blue;
+            Item.value = Item.sellPrice(0, 0, 40, 0);
             Item.defense = 1;
             base.SetDefaults();
         }

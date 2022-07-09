@@ -20,8 +20,8 @@ namespace GlassCannonClass.Items.Armor.Pre_Plantera
             //set the stats for the item
             Item.width = 18;
             Item.height = 18;
-            Item.rare = ItemRarityID.White;
-            Item.value = Item.sellPrice(0, 1,20, 0);
+            Item.rare = ItemRarityID.Lime;
+            Item.value = Item.sellPrice(0, 1, 60, 0);
             Item.defense = 5;
             base.SetDefaults();
         }

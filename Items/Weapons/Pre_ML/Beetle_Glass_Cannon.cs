@@ -17,13 +17,14 @@ namespace GlassCannonClass.Items.Weapons.Pre_ML
             Item.height = 32;
             Item.useAmmo = 997;
             Item.shoot = 997;
-            Item.UseSound = SoundID.Item5;
+            Item.UseSound = SoundID.Item11;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 200;
+            Item.damage = 204;
             Item.crit += 38;
             Item.shootSpeed = 62f;
             Item.noMelee = true;
             Item.autoReuse = true;
+            Item.rare = ItemRarityID.Yellow;
             Item.value = Item.sellPrice(0, 1, 60, 0);
             Item.scale = 0.8f;
         }
