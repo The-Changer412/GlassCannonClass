@@ -29,4 +29,30 @@ namespace GlassCannonClass.Items.Ammo.Rockets
                 .Register();
         }
     }
+
+    internal class Lumanite_Glass_Rocket : ModItem
+    {
+        public override void SetDefaults()
+        {
+            //set the stats for glass 
+            base.SetDefaults();
+            Item.width = 18;
+            Item.height = 14;
+            Item.maxStack = 9999;
+            Item.consumable = true;
+            Item.knockBack = 2f;
+            Item.ammo = 997;
+            Item.shoot = ModContent.ProjectileType<Lumanite_Glass_Rocket_Projectile>();
+        }
+
+        public override void AddRecipes()
+        {
+            //craft glass ammo from glass
+            CreateRecipe(300)
+                .AddIngredient(ItemID.Glass, 1)
+                .AddIngredient(ItemID.LunarBar, 1)
+                .AddIngredient(ItemID.RocketIII, 300)
+                .Register();
+        }
+    }
 }

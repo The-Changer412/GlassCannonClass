@@ -15,9 +15,9 @@ namespace GlassCannonClass.Projectiles.Rockets
             Projectile.height = 16;
             Projectile.friendly = true;
             Projectile.arrow = true;
-            Projectile.penetrate = 3;
-            Projectile.aiStyle = ProjectileID.RocketI;
-            AIType = ProjectileID.RocketI;
+            Projectile.penetrate = 1;
+            Projectile.aiStyle = ProjectileID.WoodenArrowFriendly;
+            AIType = ProjectileID.WoodenArrowFriendly;
         }
 
         public override void PostAI()
@@ -47,6 +47,51 @@ namespace GlassCannonClass.Projectiles.Rockets
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Vector2.Zero, ProjectileID.Explosives, 220, 20);
+            return base.OnTileCollide(oldVelocity);
+        }
+    }
+
+    internal class Lumanite_Glass_Rocket_Projectile : ModProjectile
+    {
+        public override void SetDefaults()
+        {
+            Projectile.netImportant = true;
+            Projectile.width = 16;
+            Projectile.height = 16;
+            Projectile.friendly = true;
+            Projectile.arrow = true;
+            Projectile.penetrate = 1;
+            Projectile.aiStyle = ProjectileID.WoodenArrowFriendly;
+            AIType = ProjectileID.WoodenArrowFriendly;
+        }
+
+        public override void PostAI()
+        {
+            Projectile.rotation = MathF.Atan2(Projectile.velocity.Y, Projectile.velocity.X);
+            base.PostAI();
+        }
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Vector2.Zero, ProjectileID.Explosives, 330, 20);
+            base.OnHitNPC(target, damage, knockback, crit);
+        }
+
+        public override void OnHitPlayer(Player target, int damage, bool crit)
+        {
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Vector2.Zero, ProjectileID.Explosives, 330, 20);
+            base.OnHitPlayer(target, damage, crit);
+        }
+
+        public override void OnHitPvp(Player target, int damage, bool crit)
+        {
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Vector2.Zero, ProjectileID.Explosives, 330, 20);
+            base.OnHitPvp(target, damage, crit);
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Vector2.Zero, ProjectileID.Explosives, 330, 20);
             return base.OnTileCollide(oldVelocity);
         }
     }

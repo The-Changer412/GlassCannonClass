@@ -37,8 +37,14 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
             Player player = Main.player[Projectile.owner];
             if (!player.dead && player.GetModPlayer<GlassPlayer>().BeetleSetBonus)
             {
-
-                Projectile.position = player.position + new Vector2(-46, -140);
+                if (player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
+                {
+                    Projectile.position = player.position + new Vector2(-46, -140);
+                }
+                else
+                {
+                    Projectile.position = player.position + new Vector2(-46, -70);
+                }
             }
             else
             {
@@ -81,13 +87,16 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
             {
                 if (Main.myPlayer == Projectile.owner && cooldown <= 0)
                 {
-                    if (!player.dead && player.GetModPlayer<GlassPlayer>().BeetleSetBonus)
+                    if (!player.dead)
                     {
-                        Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 380, 0f, Projectile.whoAmI);
-                    }
-                    else
-                    {
-                        Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 0f, Projectile.whoAmI);
+                        if(player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
+                        {
+                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 380, 0f, Projectile.whoAmI);
+                        }
+                        else
+                        {
+                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 0f, Projectile.whoAmI);
+                        }
                     }
                     cooldown = MaxCooldown;
                 }
