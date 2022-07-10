@@ -29,8 +29,8 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
 
         public override void AI()
         {
-            float SeeRange = 200f;
-            Vector2 TargetPos = Projectile.position;
+            float SeeRange = 400f;
+            Vector2 TargetPos = new Vector2(99999, 99999);
             bool FoundTarget = false;
 
             //check if the player is dead and if the set bonus is active. if so, the constanly move and hover. if not, then kill it.
@@ -57,48 +57,51 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
                 cooldown--;
             }
 
-            //find the closest enemy to shoot at
-            if (!FoundTarget)
+            //iter between all npcs
+            for (int i = 0; i < Main.maxNPCs; i++)
             {
-                //iter between all npcs
-                for (int i = 0; i < Main.maxNPCs; i++)
+                NPC npc = Main.npc[i];
+                //check if enemy is bad and not dead
+                if (npc.CanBeChasedBy() && !npc.townNPC && !npc.friendly && npc.life > 0)
                 {
-                    NPC npc = Main.npc[i];
-                    //check if enemy
-                    if (npc.CanBeChasedBy() || !Main.npc[i].townNPC || !Main.npc[i].friendly)
-                    { 
-                        float dis = Vector2.Distance(npc.Center, Projectile.Center);
-                        bool closest = Vector2.Distance(Projectile.Center, TargetPos) > dis;
-                        bool inRange = dis < SeeRange;
-                        bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
-                        bool closeThroughWall = dis < 100f;
-
-                        if (((closest && inRange) || !FoundTarget) && (lineOfSight || closeThroughWall))
+                    //check if its not hiding behind a wall
+                    if (Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height))
+                    {
+                        //check if it is the closest enemy
+                        if (Vector2.Distance(npc.Center, Projectile.Center) < SeeRange && Vector2.Distance(npc.Center, Projectile.Center) < Vector2.Distance(TargetPos, Projectile.Center))
                         {
-                            SeeRange = dis;
                             TargetPos = npc.Center;
-                            FoundTarget = true;
                         }
                     }
                 }
             }
 
+            //check if the target pos have been modified
+            if (!Vector2.Equals(TargetPos, new Vector2(99999, 99999)))
+            {
+                FoundTarget = true;
+            }
+
+
+            //if found a target, then shoot at it when the cooldown is down and the player isnt dead
             if (FoundTarget)
             {
-                if (Main.myPlayer == Projectile.owner && cooldown <= 0)
+                if (cooldown <= 0)
                 {
                     if (!player.dead)
                     {
-                        if(player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
+                        if (player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
                         {
-                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 380, 0f, Projectile.whoAmI);
+                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 380, 2f, Projectile.whoAmI);
                         }
                         else
                         {
-                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 0f, Projectile.whoAmI);
+                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 2f, Projectile.whoAmI);
                         }
                     }
                     cooldown = MaxCooldown;
+                    FoundTarget = false;
+                    TargetPos = new Vector2(99999, 99999);
                 }
             }
         }
