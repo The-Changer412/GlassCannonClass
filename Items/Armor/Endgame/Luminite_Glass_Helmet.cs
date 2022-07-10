@@ -44,7 +44,6 @@ namespace GlassCannonClass.Items.Armor.Endgame
             player.GetModPlayer<GlassPlayer>().HMT3SetBonusAdamantite = true;
             player.GetModPlayer<GlassPlayer>().HMT3SetBonusTitanium = true;
             player.GetModPlayer<GlassPlayer>().ChlorophyteSetBonus = true;
-            player.GetModPlayer<GlassPlayer>().BeetleSetBonus = true;
         }
 
         public override void AddRecipes()
@@ -57,7 +56,6 @@ namespace GlassCannonClass.Items.Armor.Endgame
                 .AddRecipeGroup("GlassCannonClass:Pre_HM_Helmet")
                 .AddRecipeGroup("GlassCannonClass:Pre_Mechs_Helmet")
                 .AddIngredient(ModContent.ItemType<Pre_Plantera.Chlorophyte_Glass_Helmet>())
-                .AddIngredient(ModContent.ItemType<Pre_ML.Beetle_Glass_Helmet>())
                 .AddIngredient(ItemID.LunarBar, 4)
                 .AddTile(TileID.LunarCraftingStation)
                 .Register();

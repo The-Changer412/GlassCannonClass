@@ -102,7 +102,7 @@ namespace GlassCannonClass
                 {
                     return false;
                 }
-                else if (target.CanBeChasedBy())
+                else if (target.CanBeChasedBy() && !target.townNPC && !target.friendly)
                 {
                     return true;
                 }

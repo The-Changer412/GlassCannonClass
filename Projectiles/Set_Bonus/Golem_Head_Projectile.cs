@@ -37,14 +37,7 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
             Player player = Main.player[Projectile.owner];
             if (!player.dead && player.GetModPlayer<GlassPlayer>().BeetleSetBonus)
             {
-                if (player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
-                {
-                    Projectile.position = player.position + new Vector2(-46, -140);
-                }
-                else
-                {
-                    Projectile.position = player.position + new Vector2(-46, -70);
-                }
+                Projectile.position = player.position + new Vector2(-46, -70);
             }
             else
             {
@@ -90,14 +83,7 @@ namespace GlassCannonClass.Projectiles.Set_Bonus
                 {
                     if (!player.dead)
                     {
-                        if (player.GetModPlayer<GlassPlayer>().LuminiteSetBonus)
-                        {
-                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 380, 2f, Projectile.whoAmI);
-                        }
-                        else
-                        {
-                            Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 2f, Projectile.whoAmI);
-                        }
+                        Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), Projectile.Center, Projectile.DirectionTo(TargetPos) * 20, ProjectileID.EyeBeam, 300, 2f, Projectile.whoAmI);
                     }
                     cooldown = MaxCooldown;
                     FoundTarget = false;

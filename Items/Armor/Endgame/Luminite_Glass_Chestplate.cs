@@ -36,7 +36,6 @@ namespace GlassCannonClass.Items.Armor.Endgame
                 .AddRecipeGroup("GlassCannonClass:Pre_HM_Chestplate")
                 .AddRecipeGroup("GlassCannonClass:Pre_Mechs_Chestplate")
                 .AddIngredient(ModContent.ItemType<Pre_Plantera.Chlorophyte_Glass_Chestplate>())
-                .AddIngredient(ModContent.ItemType<Pre_ML.Beetle_Glass_Chestplate>())
                 .AddIngredient(ItemID.LunarBar, 4)
                 .AddTile(TileID.LunarCraftingStation)
                 .Register();
