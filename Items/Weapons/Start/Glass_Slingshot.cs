@@ -46,7 +46,7 @@ namespace GlassCannonClass.Items.Weapons.Start
         //make it have a 10 percent to not consume ammo
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
-            return Main.rand.NextFloat() >= 0.1f;
+            return Main.rand.NextFloat() >= 0.10f;
         }
 
         //offset the slingshot so the player is holding it correctly
