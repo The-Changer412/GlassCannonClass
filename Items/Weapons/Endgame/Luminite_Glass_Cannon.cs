@@ -42,10 +42,10 @@ namespace GlassCannonClass.Items.Weapons.Endgame
             }
         }
 
-        //make it have a 50 percent to not consume ammo
+        //make it have a 60 percent to not consume ammo
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
-            return Main.rand.NextFloat() >= 0.50f;
+            return Main.rand.NextFloat() >= 0.60f;
         }
 
         //make it craftable

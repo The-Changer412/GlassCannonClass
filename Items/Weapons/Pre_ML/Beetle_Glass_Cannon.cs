@@ -42,7 +42,7 @@ namespace GlassCannonClass.Items.Weapons.Pre_ML
             }
         }
 
-        //make it have a 15 percent to not consume ammo
+        //make it have a 40 percent to not consume ammo
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
             return Main.rand.NextFloat() >= 0.50f;

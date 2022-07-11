@@ -42,10 +42,10 @@ namespace GlassCannonClass.Items.Weapons.Pre_Plantera
             }
         }
 
-        //make it have a 15 percent to not consume ammo
+        //make it have a 25 percent to not consume ammo
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
-            return Main.rand.NextFloat() >= 0.20f;
+            return Main.rand.NextFloat() >= 0.25f;
         }
 
         //make it craftable

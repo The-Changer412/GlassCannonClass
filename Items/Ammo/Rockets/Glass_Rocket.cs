@@ -9,7 +9,7 @@ namespace GlassCannonClass.Items.Ammo.Rockets
     {
         public override void SetDefaults()
         {
-            //set the stats for glass 
+            //set the stats for glass
             base.SetDefaults();
             Item.width = 18;
             Item.height = 14;
@@ -36,7 +36,7 @@ namespace GlassCannonClass.Items.Ammo.Rockets
     {
         public override void SetDefaults()
         {
-            //set the stats for glass 
+            //set the stats for glass
             base.SetDefaults();
             Item.width = 18;
             Item.height = 14;

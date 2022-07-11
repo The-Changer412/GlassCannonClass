@@ -43,10 +43,10 @@ namespace GlassCannonClass.Items.Weapons.Pre_Mechs
             }
         }
 
-        //make it have a 20 percent to not consume ammo
+        //make it have a 22 percent to not consume ammo
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
-            return Main.rand.NextFloat() >= 0.20f;
+            return Main.rand.NextFloat() >= 0.22f;
         }
 
         //make it craftable
