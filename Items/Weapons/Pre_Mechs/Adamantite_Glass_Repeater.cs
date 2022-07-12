@@ -19,7 +19,7 @@ namespace GlassCannonClass.Items.Weapons.Pre_Mechs
             Item.shoot = 999;
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 80;
+            Item.damage = 125;
             Item.crit += 20;
             Item.shootSpeed = 40f;
             Item.noMelee = true;
