@@ -52,7 +52,7 @@ Set Bonus: You can now use glass weapons. 10% increase glass damage. 15% increas
 
 Set Bonus: You can now use glass weapons. 25% increase glass damage. 20% increase crit chance. Hitting an enemy has a 20% chance of firing a glass shard torwards the enemy.
 
-<img src="Items/Weapons/Pre_HM/Demonite_Glass_Bow.png" alt="Demonite Glass Bow"/> Demonite Glass Bow. 56 damage and 14% crit chance. Uses Glass Arrows as ammo. Has a 20% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass, 6 Demonite Bars, and 4 Shadow Scales at a Work Bench.
+<img src="Items/Weapons/Pre_HM/Demonite_Glass_Bow.png" alt="Demonite Glass Bow"/> Demonite Glass Bow. 66 damage and 20% crit chance. Uses Glass Arrows as ammo. Has a 20% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass, 6 Demonite Bars, and 4 Shadow Scales at a Work Bench.
 
 <img src="Items/Armor/Pre_HM/Crimtane_Helmet.png" alt="Crimtane Glass Helemt"/> Crimtane Glass Helmet. 3 defense. Made with 30 Glass, 4 Crimtane Bars, and 4 Tissue Samples at a Work Bench.
 
@@ -62,7 +62,7 @@ Set Bonus: You can now use glass weapons. 25% increase glass damage. 20% increas
 
 Set Bonus: You can now use glass weapons. 25% increase glass damage. 20% increase crit chance. Hitting an enemy has a 20% chance of firing a glass shard torwards the enemy.
 
-<img src="Items/Weapons/Pre_HM/Crimtane_Glass_Bow.png" alt="Crimtane Glass Bow"/> Crimtane Glass Bow. 56 damage and 14% crit chance. Uses Glass Arrows as ammo. Has a 20% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass, 6 Crimtane Bars, and 4 Tissue Samples at a Work Bench.
+<img src="Items/Weapons/Pre_HM/Crimtane_Glass_Bow.png" alt="Crimtane Glass Bow"/> Crimtane Glass Bow. 66 damage and 20% crit chance. Uses Glass Arrows as ammo. Has a 20% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass, 6 Crimtane Bars, and 4 Tissue Samples at a Work Bench.
 
 <img src="Items/Ammo/Arrows/Glass_Arrow.png" alt="Glass Arrow"/> Glass Arrow. Made with 1 Glass and 1 Wooden Arrow by hand.
 

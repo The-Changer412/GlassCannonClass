@@ -19,9 +19,9 @@ namespace GlassCannonClass.Items.Weapons.Pre_HM
             Item.shoot = 999;
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
-            Item.damage = 62;
-            Item.crit += 14;
-            Item.shootSpeed = 30f;
+            Item.damage = 66;
+            Item.crit += 20;
+            Item.shootSpeed = 50f;
             Item.noMelee = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.Orange;
