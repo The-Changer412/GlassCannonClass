@@ -16,8 +16,8 @@ namespace GlassCannonClass.Projectiles.Rockets
             Projectile.friendly = true;
             Projectile.arrow = true;
             Projectile.penetrate = 1;
-            Projectile.aiStyle = ProjectileID.WoodenArrowFriendly;
-            AIType = ProjectileID.WoodenArrowFriendly;
+            Projectile.aiStyle = ProjectileID.Bullet;
+            AIType = ProjectileID.Bullet;
         }
 
         public override void PostAI()
@@ -61,8 +61,8 @@ namespace GlassCannonClass.Projectiles.Rockets
             Projectile.friendly = true;
             Projectile.arrow = true;
             Projectile.penetrate = 1;
-            Projectile.aiStyle = ProjectileID.WoodenArrowFriendly;
-            AIType = ProjectileID.WoodenArrowFriendly;
+            Projectile.aiStyle = ProjectileID.Bullet;
+            AIType = ProjectileID.Bullet;
         }
 
         public override void PostAI()
