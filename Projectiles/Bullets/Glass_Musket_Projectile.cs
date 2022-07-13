@@ -40,17 +40,23 @@ namespace GlassCannonClass.Projectiles.Bullets
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(BuffID.Poisoned, 15*60);
+            target.AddBuff(BuffID.Poisoned, 5*60);
+            target.AddBuff(BuffID.Venom, 5*60);
+            target.AddBuff(BuffID.Frostburn, 5 * 60);
             base.OnHitNPC(target, damage, knockback, crit);
         }
         public override void OnHitPlayer(Player target, int damage, bool crit)
         {
-            target.AddBuff(BuffID.Poisoned, 15*60);
+            target.AddBuff(BuffID.Poisoned, 5*60);
+            target.AddBuff(BuffID.Venom, 5 * 60);
+            target.AddBuff(BuffID.Frostburn, 5 * 60);
             base.OnHitPlayer(target, damage, crit);
         }
         public override void OnHitPvp(Player target, int damage, bool crit)
         {
-            target.AddBuff(BuffID.Poisoned, 15*60);
+            target.AddBuff(BuffID.Poisoned, 5*60);
+            target.AddBuff(BuffID.Venom, 5*60);
+            target.AddBuff(BuffID.Frostburn, 5 * 60);
             base.OnHitPvp(target, damage, crit);
         }
 

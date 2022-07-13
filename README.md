@@ -89,9 +89,9 @@ Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increas
 <img src="Items/Weapons/Pre_Mechs/Titamium_Glass_Repeater.png" alt="Titamium Glass Repeater"/> Titamium Glass Repeater. 125 damage and 40% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Titamium Bars at a Mythril/Orichalcum Anvil.
 
 
-<img src="Items/Ammo/Arrows/Cursed_Flame_Glass_Arrow.png" alt="Cursed Flame Glass Arrow"/> Cursed Flame Glass Arrow. Made with 1 Cursed Flame and 150 Glass Arrows by hand.
+<img src="Items/Ammo/Arrows/Cursed_Flame_Glass_Arrow.png" alt="Cursed Flame Glass Arrow"/> Cursed Flame Glass Arrow. Inflict Cursed Inferno on the target. Made with 1 Cursed Flame and 150 Glass Arrows by hand.
 
-<img src="Items/Ammo/Arrows/Ichor_Glass_Arrow.png" alt="Ichor Glass Arrow"/> Ichor Glass Arrow. Made with 1 Ichor and 150 Glass Arrows by hand.
+<img src="Items/Ammo/Arrows/Ichor_Glass_Arrow.png" alt="Ichor Glass Arrow"/> Ichor Glass Arrow. Inflict Ichor on the target. Made with 1 Ichor and 150 Glass Arrows by hand.
 
 
 ## Pre-Plantera
@@ -105,7 +105,7 @@ Set Bonus: You can now use glass weapons. 48% increase glass damage. 38% increas
 
 <img src="Items/Weapons/Pre_Plantera/Chlorophyte_Glass_Flintlock_Pistol.png" alt="Chlorophyte Glass Flintlock Pistol"/> Chlorophyte Glass Flintlock Pistol. 142 damage and 30% crit chance. Uses Glass Bullets as ammo. Has a 25% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass, 6 Chlorophyte Bars, and 1 Flintlock Pistol at a Mythril/Orichalcum Anvil.
 
-<img src="Items/Ammo/Bullets/Chlorophyte_Glass.png" alt="Chlorophyte Glass Bullet"/> Chlorophyte Glass Bullet. Made with 1 Chlorophyte Bar and 60 Glass Muskets by hand.
+<img src="Items/Ammo/Bullets/Chlorophyte_Glass.png" alt="Chlorophyte Glass Bullet"/> Chlorophyte Glass Bullet. Inflict Poison, Acid Venom, and Frostburn on the target. Made with 1 Chlorophyte Bar and 60 Glass Muskets by hand.
 
 
 ## Pre-Moon Lord
