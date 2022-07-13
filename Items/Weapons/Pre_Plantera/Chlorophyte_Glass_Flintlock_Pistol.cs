@@ -21,7 +21,7 @@ namespace GlassCannonClass.Items.Weapons.Pre_Plantera
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 142;
             Item.crit += 30;
-            Item.shootSpeed = 56f;
+            Item.shootSpeed = 50f;
             Item.noMelee = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.Lime;
