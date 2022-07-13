@@ -203,7 +203,6 @@ namespace GlassCannonClass
 
         }
 
-
         public override void OnHitAnything(float x, float y, Entity victim)
         {
 			//make the set bonus for the evil set bonus, where it has a 20% chance to fire an extra arrow when hitting an enemy
@@ -254,6 +253,16 @@ namespace GlassCannonClass
 			BeetleSetBonus = false;
 			LuminiteSetBonus = false;
 		}
+
+        public override bool CanBeHitByProjectile(Projectile proj)
+        {
+			if (proj.type == ProjectileID.Explosives)
+			{
+				System.Console.WriteLine("try to prevent suicide");
+				return false;
+			}
+			return base.CanBeHitByProjectile(proj);
+        }
     }
 
 	public class GlassDamage : DamageClass

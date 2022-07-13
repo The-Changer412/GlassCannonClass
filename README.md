@@ -101,7 +101,7 @@ Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increas
 
 <img src="Items/Armor/Pre_Plantera/Chlorophyte_Glass_Leggings.png" alt="Chlorophyte Glass Leggings"/> Chlorophyte Glass Leggings. 5 defense. Made with 30 Glass and 10 Chlorophyte Bars at a Mythril/Orichalcum Anvil.
 
-Set Bonus: You can now use glass weapons. 48% increase glass damage. 38% increase crit chance. Every fifth hit will cause an explosion (You can be damage from the explosion, so be careful).
+Set Bonus: You can now use glass weapons. 48% increase glass damage. 38% increase crit chance. Every fifth hit will cause an explosion.
 
 <img src="Items/Weapons/Pre_Plantera/Chlorophyte_Glass_Flintlock_Pistol.png" alt="Chlorophyte Glass Flintlock Pistol"/> Chlorophyte Glass Flintlock Pistol. 142 damage and 30% crit chance. Uses Glass Bullets as ammo. Has a 25% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass, 6 Chlorophyte Bars, and 1 Flintlock Pistol at a Mythril/Orichalcum Anvil.
 
