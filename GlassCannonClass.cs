@@ -196,7 +196,7 @@ namespace GlassCannonClass
 				}
                 else
                 {
-					Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -35), velocity * 30, ProjectileID.HellfireArrow, 82, 2f, Player.whoAmI);
+					Projectile.NewProjectile(Player.GetSource_NaturalSpawn(), Player.position + new Vector2(4, -35), velocity * 30, ProjectileID.HellfireArrow, 120, 2f, Player.whoAmI);
 				}
 			}
 			return base.Shoot(item, source, position, velocity, type, damage, knockback);

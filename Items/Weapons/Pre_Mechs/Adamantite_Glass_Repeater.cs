@@ -20,9 +20,10 @@ namespace GlassCannonClass.Items.Weapons.Pre_Mechs
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 125;
-            Item.crit += 20;
-            Item.shootSpeed = 40f;
+            Item.crit += 40;
+            Item.shootSpeed = 50f;
             Item.noMelee = true;
+            Item.autoReuse = true;
             Item.rare = ItemRarityID.LightRed;
             Item.value = Item.sellPrice(0, 1, 20, 0);
             Item.scale = 0.8f;

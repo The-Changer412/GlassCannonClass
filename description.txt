@@ -51,13 +51,13 @@ Adamantite Glass Helmet. 4 defense. Made with 30 Glass and 8 Adamantite Bars at 
 Adamantite Glass Chestplate. 4 defense. Made with 30 Glass and 8 Adamantite Bars at a Mythril/Orichalcum Anvil.
 Adamantite Glass Leggings. 4 defense. Made with 30 Glass and 8 Adamantite Bars at a Mythril/Orichalcum Anvil.
 Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increase crit chance. A floating Adamanantite Repeater follows you and shoot Hellfire Arrows whenever you shoot.
-Adamantite Glass Repeater. 80 damage and 20% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Adamantite Bars at a Mythril/Orichalcum Anvil.
+Adamantite Glass Repeater. 125 damage and 40% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Adamantite Bars at a Mythril/Orichalcum Anvil.
 
 Titamium Glass Helmet. 4 defense. Made with 30 Glass and 8 Titamium Bars at a Mythril/Orichalcum Anvil.
 Titamium Glass Chestplate. 4 defense. Made with 30 Glass and 8 Titamium Bars at a Mythril/Orichalcum Anvil.
 Titamium Glass Leggings. 4 defense. Made with 30 Glass and 8 Titamium Bars at a Mythril/Orichalcum Anvil.
 Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increase crit chance. A floating Titamium Repeater follows you and shoot Hellfire Arrows whenever you shoot.
-Titamium Glass Repeater. 80 damage and 20% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Titamium Bars at a Mythril/Orichalcum Anvil.
+Titamium Glass Repeater. 125 damage and 40% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Titamium Bars at a Mythril/Orichalcum Anvil.
 
 
 <img src="Items/Ammo/Arrows/Cursed_Flame_Glass_Arrow.png" alt="Cursed Flame Glass Arrow"/> Cursed Flame Glass Arrow. Made with 1 Cursed Flame and 150 Glass Arrows by hand.

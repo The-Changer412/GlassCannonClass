@@ -17,12 +17,11 @@ namespace GlassCannonClass.Items.Weapons.Pre_Mechs
             Item.height = 25;
             Item.useAmmo = 999;
             Item.shoot = 999;
-            //Item.shoot = ModContent.ProjectileType<Glass_Arrow_Projectile>();
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 125;
-            Item.crit += 20;
-            Item.shootSpeed = 40f;
+            Item.crit += 40;
+            Item.shootSpeed = 50f;
             Item.noMelee = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.LightRed;

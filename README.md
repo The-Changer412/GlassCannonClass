@@ -76,7 +76,7 @@ Set Bonus: You can now use glass weapons. 25% increase glass damage. 20% increas
 
 Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increase crit chance. A floating Adamanantite Repeater follows you and shoot Hellfire Arrows whenever you shoot.
 
-<img src="Items/Weapons/Pre_Mechs/Adamantite_Glass_Repeater.png" alt="Adamantite Glass Repeater"/> Adamantite Glass Repeater. 80 damage and 20% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Adamantite Bars at a Mythril/Orichalcum Anvil.
+<img src="Items/Weapons/Pre_Mechs/Adamantite_Glass_Repeater.png" alt="Adamantite Glass Repeater"/> Adamantite Glass Repeater. 125 damage and 40% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Adamantite Bars at a Mythril/Orichalcum Anvil.
 
 <img src="Items/Armor/Pre_Mechs/Titamium_Glass_Helmet.png" alt="Titamium Glass Helemt"/> Titamium Glass Helmet. 4 defense. Made with 30 Glass and 8 Titamium Bars at a Mythril/Orichalcum Anvil.
 
@@ -86,7 +86,7 @@ Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increas
 
 Set Bonus: You can now use glass weapons. 42% increase glass damage. 32% increase crit chance. A floating Titamium Repeater follows you and shoot Hellfire Arrows whenever you shoot.
 
-<img src="Items/Weapons/Pre_Mechs/Titamium_Glass_Repeater.png" alt="Titamium Glass Repeater"/> Titamium Glass Repeater. 80 damage and 20% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Titamium Bars at a Mythril/Orichalcum Anvil.
+<img src="Items/Weapons/Pre_Mechs/Titamium_Glass_Repeater.png" alt="Titamium Glass Repeater"/> Titamium Glass Repeater. 125 damage and 40% crit chance. Uses Glass Arrows as ammo. Has a 22% chance to not consume ammo. Can only be uses with a full set of any glass armor. Made with 30 Glass and 6 Titamium Bars at a Mythril/Orichalcum Anvil.
 
 
 <img src="Items/Ammo/Arrows/Cursed_Flame_Glass_Arrow.png" alt="Cursed Flame Glass Arrow"/> Cursed Flame Glass Arrow. Made with 1 Cursed Flame and 150 Glass Arrows by hand.
