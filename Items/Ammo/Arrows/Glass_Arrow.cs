@@ -16,7 +16,7 @@ namespace GlassCannonClass.Items.Ammo.Arrows
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 2f;
-            Item.ammo = 999;
+            Item.ammo = AmmoID.Arrow;
             Item.rare = ItemRarityID.Orange;
             Item.value = Item.sellPrice(0, 0, 0, 2);
             Item.shoot = ModContent.ProjectileType<Glass_Arrow_Projectile>();
@@ -43,7 +43,7 @@ namespace GlassCannonClass.Items.Ammo.Arrows
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 4f;
-            Item.ammo = 999;
+            Item.ammo = AmmoID.Arrow;
             Item.rare = ItemRarityID.LightRed;
             Item.value = Item.sellPrice(0, 0, 0, 3);
             Item.shoot = ModContent.ProjectileType<Cursed_Flame_Glass_Arrow_Projectile>();
@@ -70,7 +70,7 @@ namespace GlassCannonClass.Items.Ammo.Arrows
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 4f;
-            Item.ammo = 999;
+            Item.ammo = AmmoID.Arrow;
             Item.rare = ItemRarityID.LightRed;
             Item.value = Item.sellPrice(0, 0, 0, 3);
             Item.shoot = ModContent.ProjectileType<Ichor_Glass_Arrow_Projectile>();

@@ -16,8 +16,8 @@ namespace GlassCannonClass.Items.Weapons.Pre_Boss
             Item.useTime = 50;
             Item.width = 12;
             Item.height = 25;
-            Item.useAmmo = 998;
-            Item.shoot = 998;
+            Item.useAmmo = AmmoID.Bullet;
+            Item.shoot = AmmoID.Bullet;
             Item.UseSound = SoundID.Item11;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 34;

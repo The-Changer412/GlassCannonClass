@@ -15,8 +15,8 @@ namespace GlassCannonClass.Items.Weapons.Pre_Mechs
             Item.useTime = 24;
             Item.width = 12;
             Item.height = 25;
-            Item.useAmmo = 999;
-            Item.shoot = 999;
+            Item.useAmmo = AmmoID.Arrow;
+            Item.shoot = AmmoID.Arrow;
             Item.UseSound = SoundID.Item5;
             Item.DamageType = ModContent.GetInstance<GlassDamage>();
             Item.damage = 125;

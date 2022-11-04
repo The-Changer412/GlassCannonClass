@@ -16,7 +16,7 @@ namespace GlassCannonClass.Items.Ammo.Rockets
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 2f;
-            Item.ammo = 997;
+            Item.ammo = AmmoID.Rocket;
             Item.rare = ItemRarityID.Yellow;
             Item.value = Item.sellPrice(0, 0, 0, 5);
             Item.shoot = ModContent.ProjectileType<Glass_Rocket_1_Projectile>();
@@ -43,7 +43,7 @@ namespace GlassCannonClass.Items.Ammo.Rockets
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 2f;
-            Item.ammo = 997;
+            Item.ammo = AmmoID.Rocket;
             Item.rare = ItemRarityID.Red;
             Item.value = Item.sellPrice(0, 0, 0, 5);
             Item.shoot = ModContent.ProjectileType<Lumanite_Glass_Rocket_Projectile>();

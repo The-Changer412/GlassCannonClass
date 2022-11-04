@@ -16,7 +16,7 @@ namespace GlassCannonClass.Items.Ammo.Bullets
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 4f;
-            Item.ammo = 998;
+            Item.ammo = AmmoID.Bullet;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(0, 0, 0, 1);
             Item.shoot = ModContent.ProjectileType<Glass_Musket_Projectile>();
@@ -43,7 +43,7 @@ namespace GlassCannonClass.Items.Ammo.Bullets
             Item.maxStack = 9999;
             Item.consumable = true;
             Item.knockBack = 4f;
-            Item.ammo = 998;
+            Item.ammo = AmmoID.Bullet;
             Item.rare = ItemRarityID.Lime;
             Item.value = Item.sellPrice(0, 0, 0, 4);
             Item.shoot = ModContent.ProjectileType<Chlorophyte_Glass_Bullet>();
