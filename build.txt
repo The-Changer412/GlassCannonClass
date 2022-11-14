@@ -1,3 +1,4 @@
 displayName = Glass Cannon Class
 author = The Changer
-version = 0.1
+version = 1.0
+homepage = https://github.com/The-Changer412/GlassCannonClass
