@@ -3,7 +3,13 @@
 This is a tModLoader mod that adds in a new class that does high damage, but has low defense, otherwise known as a glass cannon.
 
 # Installation
-you can download the mod from the [Steam's Workshop page](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+you can download the mod from the [Steam's Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2888425686).
+
+This video shows the glass cannon class against boss fights.
+<br>
+<br>
+[![IMAGE_ALT](https://img.youtube.com/vi/G-olhSt9sWE/0.jpg)](https://www.youtube.com/watch?v=G-olhSt9sWE)
+
 
 # Class Setups
 ## Start
